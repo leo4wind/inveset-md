@@ -52,7 +52,8 @@
      "现值",
      "终值",
      "内部收益率",
-     "净现值"
+     "净现值",
+     "CAPM模型"
     ],
     "note": ""
    },
@@ -289,7 +290,8 @@
     "KP33",
     "KP34",
     "KP35",
-    "KP36"
+    "KP36",
+    "KP186"
    ]
   },
   {
@@ -6800,6 +6802,49 @@
     "把运气当能力致加杠杆",
     "忽视基础概率与样本偏差"
    ]
+  },
+  {
+   "id": "KP186",
+   "name": "CAPM模型",
+   "layer": "L1",
+   "domain": "收益指标",
+   "definition": "资本资产定价模型：资产预期收益率与系统性风险(Beta)的线性关系 E(Ri)=Rf+βi(E(Rm)−Rf)",
+   "explanation": "CAPM（Capital Asset Pricing Model，资本资产定价模型）是现代金融的基石之一，描述在均衡市场下单个资产的预期收益率如何仅由其系统性风险（Beta）决定。模型认为投资者因承担不可分散的系统性风险而获得补偿，非系统性风险可通过分散化消除、不在定价之中。它常用于估算股权成本、评估基金或个股的超额收益（Alpha），以及作为资本预算的折现率。",
+   "formula": "E(Ri) = Rf + βi × (E(Rm) − Rf)\nRf=无风险利率，βi=资产i的Beta，E(Rm)−Rf=市场风险溢价",
+   "key_points": [
+    "预期收益只补偿系统性风险，非系统性风险不定价",
+    "Beta 衡量资产收益对市场收益的敏感度",
+    "证券市场线(SML)是 CAPM 的图形表达",
+    "Alpha = 实际收益 − CAPM 预期收益，>0 表示跑赢市场",
+    "假设市场有效、无摩擦、投资者同质预期（强假设）"
+   ],
+   "examples": [
+    "无风险利率3%、市场溢价6%、某股Beta=1.2，则预期收益=3%+1.2×6%=10.2%",
+    "基金年收益12%但CAPM预期仅9%，则Alpha=3%，代表选股创造的超额回报"
+   ],
+   "pitfalls": [
+    "现实市场存在摩擦与异象，CAPM 常低估小盘/价值股收益（被 Fama-French 三因子等扩展）",
+    "Beta 用历史收益估计，不稳定且不代表未来；Rf 与市场溢价选取主观"
+   ],
+   "prerequisites": [
+    "收益率",
+    "Beta",
+    "波动率"
+   ],
+   "related": [
+    "Alpha",
+    "风险溢价",
+    "系统性风险",
+    "夏普比率",
+    "国债"
+   ],
+   "scenarios": [
+    "选股分析",
+    "资产配置",
+    "风险管理"
+   ],
+   "difficulty": "基础",
+   "confidence": 0.95
   }
  ],
  "edges": [
@@ -9210,6 +9255,62 @@
    "type": "association",
    "weight": 0.35,
    "label": "同域(投资纪律)"
+  },
+  {
+   "source": "KP186",
+   "target": "KP28",
+   "type": "dependency",
+   "weight": 0.6,
+   "label": "依赖(给出预期收益率)"
+  },
+  {
+   "source": "KP186",
+   "target": "KP32",
+   "type": "dependency",
+   "weight": 0.7,
+   "label": "依赖(以Beta度量系统性风险)"
+  },
+  {
+   "source": "KP186",
+   "target": "KP22",
+   "type": "dependency",
+   "weight": 0.5,
+   "label": "依赖(Beta源于收益波动)"
+  },
+  {
+   "source": "KP186",
+   "target": "KP31",
+   "type": "association",
+   "weight": 0.6,
+   "label": "关联(Alpha=实际−CAPM预期)"
+  },
+  {
+   "source": "KP186",
+   "target": "KP42",
+   "type": "association",
+   "weight": 0.6,
+   "label": "关联(含市场风险溢价项)"
+  },
+  {
+   "source": "KP186",
+   "target": "KP37",
+   "type": "association",
+   "weight": 0.6,
+   "label": "关联(只给系统性风险定价)"
+  },
+  {
+   "source": "KP186",
+   "target": "KP33",
+   "type": "association",
+   "weight": 0.4,
+   "label": "关联(同为风险调整收益框架)"
+  },
+  {
+   "source": "KP186",
+   "target": "KP78",
+   "type": "association",
+   "weight": 0.4,
+   "label": "关联(无风险利率Rf常以国债收益率为代理)"
   }
  ],
  "matrix": {
@@ -9257,7 +9358,8 @@
      "现值",
      "终值",
      "内部收益率",
-     "净现值"
+     "净现值",
+     "CAPM模型"
     ],
     "资产配置": [
      "回撤",
@@ -9281,7 +9383,8 @@
      "夏普比率",
      "索提诺比率",
      "信息比率",
-     "Calmar比率"
+     "Calmar比率",
+     "CAPM模型"
     ],
     "现金管理": [],
     "打新": [],
@@ -9299,7 +9402,8 @@
      "黑天鹅",
      "灰犀牛",
      "尾部风险",
-     "风险溢价"
+     "风险溢价",
+     "CAPM模型"
     ],
     "行业研究": []
    },
