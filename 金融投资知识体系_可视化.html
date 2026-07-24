@@ -56,6 +56,13 @@
   #loader p { font-size:13px; color:var(--muted); margin-bottom:16px; }
   #loader input[type=file] { font-size:13px; }
   #loader .path { margin-top:12px; font-size:12px; color:var(--muted); font-family:monospace; word-break:break-all; }
+  .sec { margin-top:14px; }
+  .sec h3 { font-size:13px; font-weight:700; color:var(--ink); margin-bottom:6px; padding-left:9px; border-left:3px solid var(--accent); }
+  .sec.warn h3 { border-left-color:#dc2626; }
+  .prose { font-size:13.5px; line-height:1.7; color:#374151; background:#f8fafc; border:1px solid var(--line); border-radius:8px; padding:11px 13px; }
+  .formula { font-family:"Cascadia Code","Consolas",monospace; font-size:13px; line-height:1.6; color:#0f172a; background:#0f172a0a; border:1px solid var(--line); border-radius:8px; padding:11px 13px; white-space:pre-wrap; }
+  .bullets { margin:0; padding-left:20px; }
+  .bullets li { font-size:13px; line-height:1.7; color:#374151; margin:3px 0; }
 </style>
 </head>
 <body>
@@ -166,10 +173,18 @@ function init(DATA){
     const rel=(n.related||[]).map(r=>'<span class="chip" data-name="'+r+'">'+r+'</span>').join('');
     const pre=(n.prerequisites||[]).map(r=>'<span class="chip" data-name="'+r+'">'+r+'</span>').join('')||'<span style="color:var(--muted);font-size:13px;">无</span>';
     const sc=(n.scenarios||[]).map(s=>'<span class="chip">'+s+'</span>').join('')||'<span style="color:var(--muted);font-size:13px;">—</span>';
+    const sec=(title,html,warn)=>'<div class="sec'+(warn?' warn':'')+'"><h3>'+title+'</h3>'+html+'</div>';
+    const list=(arr)=>'<ul class="bullets">'+arr.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+    const exp = n.explanation ? sec('详细解释','<div class="prose">'+n.explanation+'</div>') : '';
+    const fml = n.formula ? sec('公式 / 计算','<div class="formula">'+n.formula+'</div>') : '';
+    const kp  = (n.key_points&&n.key_points.length) ? sec('核心要点',list(n.key_points)) : '';
+    const ex  = (n.examples&&n.examples.length) ? sec('示例',list(n.examples)) : '';
+    const pf  = (n.pitfalls&&n.pitfalls.length) ? sec('常见误区',list(n.pitfalls),true) : '';
     document.getElementById('detail').innerHTML=
       '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="width:14px;height:14px;border-radius:50%;background:'+(LAYER_COLORS[n.layer]||'#64748b')+'"></span><span style="font-size:19px;font-weight:700;">'+n.name+'</span></div>'
       +'<span class="badge b-'+n.layer+'">'+LAYER_NAMES[n.layer]+'</span><span class="badge" style="background:#64748b;">'+n.domain+'</span>'
       +'<div class="def">'+n.definition+'</div>'
+      +exp+fml+kp+ex+pf
       +'<div class="meta-row"><b>学习难度</b>'+n.difficulty+'</div>'
       +'<div class="meta-row"><b>置信度</b>'+(n.confidence!=null?(n.confidence*100).toFixed(0)+'%':'—')+'</div>'
       +'<div class="meta-row"><b>前置依赖</b><div class="chips">'+pre+'</div></div>'
