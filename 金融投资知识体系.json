@@ -1,0 +1,6628 @@
+{
+  "domain": "金融投资",
+  "build_meta": {
+    "skill": "domain-knowledge-graph-builder",
+    "version": "1.0",
+    "term_count": 185,
+    "supplemented": true,
+    "source": "fromGpt/26-07-22.txt",
+    "built_at": "2026-07-22"
+  },
+  "framework": {
+    "layers": [
+      {
+        "id": "L1",
+        "name": "基础理论层",
+        "terms": [
+          "回撤",
+          "前复权",
+          "一级市场",
+          "二级市场",
+          "牛市",
+          "熊市",
+          "震荡市",
+          "市值",
+          "流动性",
+          "成交量",
+          "换手率",
+          "波动率",
+          "杠杆",
+          "做多",
+          "做空",
+          "保证金",
+          "熔断",
+          "收益率",
+          "年化收益率",
+          "CAGR",
+          "Alpha",
+          "Beta",
+          "夏普比率",
+          "索提诺比率",
+          "信息比率",
+          "Calmar比率",
+          "系统性风险",
+          "非系统性风险",
+          "黑天鹅",
+          "灰犀牛",
+          "尾部风险",
+          "风险溢价",
+          "复利",
+          "单利",
+          "折现",
+          "现值",
+          "终值",
+          "内部收益率",
+          "净现值"
+        ],
+        "note": ""
+      },
+      {
+        "id": "L2",
+        "name": "核心业务能力层",
+        "terms": [
+          "财报",
+          "持仓",
+          "ETF",
+          "国债逆回购",
+          "新股",
+          "新债",
+          "市盈率",
+          "市净率",
+          "市销率",
+          "PEG",
+          "EV/EBITDA",
+          "股息率",
+          "ROE",
+          "ROA",
+          "毛利率",
+          "净利率",
+          "自由现金流",
+          "经营现金流",
+          "EPS",
+          "每股净资产",
+          "资产负债表",
+          "利润表",
+          "现金流量表",
+          "商誉",
+          "存货",
+          "应收账款",
+          "固定资产",
+          "折旧",
+          "摊销",
+          "LOF",
+          "REITs",
+          "可转债",
+          "债券",
+          "公司债",
+          "国债",
+          "可交换债",
+          "货币基金",
+          "指数基金",
+          "QDII",
+          "FOF",
+          "上证指数",
+          "深证成指",
+          "创业板指",
+          "科创50",
+          "沪深300",
+          "中证500",
+          "中证1000",
+          "纳斯达克100",
+          "标普500",
+          "道琼斯指数",
+          "恒生指数",
+          "涨停",
+          "跌停",
+          "集合竞价",
+          "连板",
+          "打板",
+          "止盈",
+          "止损",
+          "仓位",
+          "满仓",
+          "空仓",
+          "加仓",
+          "减仓",
+          "网格交易",
+          "定投",
+          "再平衡"
+        ],
+        "note": ""
+      },
+      {
+        "id": "L3",
+        "name": "扩展应用层",
+        "terms": [
+          "高盛",
+          "巴菲特",
+          "美股",
+          "A股",
+          "内在价值",
+          "护城河",
+          "DCF估值",
+          "芒格",
+          "格雷厄姆",
+          "安全边际",
+          "能力圈",
+          "成长股",
+          "龙头股",
+          "景气周期",
+          "TAM",
+          "渗透率",
+          "GDP",
+          "CPI",
+          "PPI",
+          "PMI",
+          "利率",
+          "美联储",
+          "降息",
+          "加息",
+          "通货膨胀",
+          "通货紧缩",
+          "汇率",
+          "美元指数",
+          "半导体",
+          "AI",
+          "新能源",
+          "医药",
+          "消费",
+          "银行",
+          "地产",
+          "军工",
+          "有色",
+          "煤炭",
+          "北向资金",
+          "南向资金",
+          "主力资金",
+          "游资",
+          "社保基金",
+          "公募基金",
+          "私募基金",
+          "QFII",
+          "ETF资金流",
+          "K线",
+          "均线",
+          "MACD",
+          "RSI",
+          "布林带",
+          "趋势线",
+          "支撑位",
+          "压力位",
+          "成交量分析"
+        ],
+        "note": ""
+      },
+      {
+        "id": "L4",
+        "name": "治理管控层",
+        "terms": [
+          "仓位管理",
+          "凯利公式",
+          "VaR",
+          "风险预算",
+          "风险暴露",
+          "压力测试",
+          "对冲",
+          "分散投资",
+          "信息披露",
+          "内幕交易",
+          "市场操纵",
+          "投资者适当性",
+          "反洗钱",
+          "KYC",
+          "合规审计",
+          "投资计划",
+          "投资日志",
+          "回测",
+          "交易复盘",
+          "行为金融",
+          "FOMO",
+          "锚定效应",
+          "损失厌恶",
+          "过度自信"
+        ],
+        "note": ""
+      }
+    ]
+  },
+  "clusters": [
+    {
+      "name": "投资分析",
+      "node_ids": [
+        "KP01",
+        "KP02",
+        "KP03"
+      ]
+    },
+    {
+      "name": "市场主体",
+      "node_ids": [
+        "KP04",
+        "KP06"
+      ]
+    },
+    {
+      "name": "组合管理",
+      "node_ids": [
+        "KP05",
+        "KP10"
+      ]
+    },
+    {
+      "name": "市场与品种",
+      "node_ids": [
+        "KP07",
+        "KP08",
+        "KP09",
+        "KP11",
+        "KP12"
+      ]
+    },
+    {
+      "name": "市场基础",
+      "node_ids": [
+        "KP13",
+        "KP14",
+        "KP15",
+        "KP16",
+        "KP17",
+        "KP18",
+        "KP19",
+        "KP20",
+        "KP21",
+        "KP22",
+        "KP23",
+        "KP24",
+        "KP25",
+        "KP26",
+        "KP27"
+      ]
+    },
+    {
+      "name": "收益指标",
+      "node_ids": [
+        "KP28",
+        "KP29",
+        "KP30",
+        "KP31",
+        "KP32",
+        "KP33",
+        "KP34",
+        "KP35",
+        "KP36"
+      ]
+    },
+    {
+      "name": "风险",
+      "node_ids": [
+        "KP37",
+        "KP38",
+        "KP39",
+        "KP40",
+        "KP41",
+        "KP42"
+      ]
+    },
+    {
+      "name": "时间价值",
+      "node_ids": [
+        "KP43",
+        "KP44",
+        "KP45",
+        "KP46",
+        "KP47",
+        "KP48",
+        "KP49"
+      ]
+    },
+    {
+      "name": "股票分析",
+      "node_ids": [
+        "KP50",
+        "KP51",
+        "KP52",
+        "KP53",
+        "KP54",
+        "KP55",
+        "KP56",
+        "KP57",
+        "KP58",
+        "KP59",
+        "KP60",
+        "KP61",
+        "KP62",
+        "KP63"
+      ]
+    },
+    {
+      "name": "财务报表",
+      "node_ids": [
+        "KP64",
+        "KP65",
+        "KP66",
+        "KP67",
+        "KP68",
+        "KP69",
+        "KP70",
+        "KP71",
+        "KP72"
+      ]
+    },
+    {
+      "name": "投资工具",
+      "node_ids": [
+        "KP73",
+        "KP74",
+        "KP75",
+        "KP76",
+        "KP77",
+        "KP78",
+        "KP79",
+        "KP80",
+        "KP81",
+        "KP82",
+        "KP83"
+      ]
+    },
+    {
+      "name": "指数",
+      "node_ids": [
+        "KP84",
+        "KP85",
+        "KP86",
+        "KP87",
+        "KP88",
+        "KP89",
+        "KP90",
+        "KP91",
+        "KP92",
+        "KP93",
+        "KP94"
+      ]
+    },
+    {
+      "name": "交易",
+      "node_ids": [
+        "KP95",
+        "KP96",
+        "KP97",
+        "KP98",
+        "KP99",
+        "KP100",
+        "KP101",
+        "KP102",
+        "KP103",
+        "KP104",
+        "KP105",
+        "KP106",
+        "KP107",
+        "KP108",
+        "KP109"
+      ]
+    },
+    {
+      "name": "价值投资",
+      "node_ids": [
+        "KP110",
+        "KP111",
+        "KP112",
+        "KP113",
+        "KP114",
+        "KP115",
+        "KP116"
+      ]
+    },
+    {
+      "name": "成长投资",
+      "node_ids": [
+        "KP117",
+        "KP118",
+        "KP119",
+        "KP120",
+        "KP121"
+      ]
+    },
+    {
+      "name": "宏观投资",
+      "node_ids": [
+        "KP122",
+        "KP123",
+        "KP124",
+        "KP125",
+        "KP126",
+        "KP127",
+        "KP128",
+        "KP129",
+        "KP130",
+        "KP131",
+        "KP132",
+        "KP133"
+      ]
+    },
+    {
+      "name": "行业分析",
+      "node_ids": [
+        "KP134",
+        "KP135",
+        "KP136",
+        "KP137",
+        "KP138",
+        "KP139",
+        "KP140",
+        "KP141",
+        "KP142",
+        "KP143"
+      ]
+    },
+    {
+      "name": "资金分析",
+      "node_ids": [
+        "KP144",
+        "KP145",
+        "KP146",
+        "KP147",
+        "KP148",
+        "KP149",
+        "KP150",
+        "KP151",
+        "KP152"
+      ]
+    },
+    {
+      "name": "技术分析",
+      "node_ids": [
+        "KP153",
+        "KP154",
+        "KP155",
+        "KP156",
+        "KP157",
+        "KP158",
+        "KP159",
+        "KP160",
+        "KP161"
+      ]
+    },
+    {
+      "name": "风险管理",
+      "node_ids": [
+        "KP162",
+        "KP163",
+        "KP164",
+        "KP165",
+        "KP166",
+        "KP167",
+        "KP168",
+        "KP169"
+      ]
+    },
+    {
+      "name": "合规",
+      "node_ids": [
+        "KP170",
+        "KP171",
+        "KP172",
+        "KP173",
+        "KP174",
+        "KP175",
+        "KP176"
+      ]
+    },
+    {
+      "name": "投资纪律",
+      "node_ids": [
+        "KP177",
+        "KP178",
+        "KP179",
+        "KP180",
+        "KP181",
+        "KP182",
+        "KP183",
+        "KP184",
+        "KP185"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "KP01",
+      "name": "回撤",
+      "definition": "资产价格或组合净值从前期高点回落的最大幅度，衡量下行风险的核心指标",
+      "layer": "L1",
+      "domain": "投资分析",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "前复权"
+      ],
+      "related": [
+        "持仓",
+        "巴菲特"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP02",
+      "name": "前复权",
+      "definition": "以最新价为基准，将历史价格按分红送股等事件向前平移，使股价走势连续可比的价格处理技术",
+      "layer": "L1",
+      "domain": "投资分析",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "回撤",
+        "财报",
+        "ETF",
+        "美股",
+        "A股"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP03",
+      "name": "财报",
+      "definition": "上市公司定期披露的财务报表（资产负债表、利润表、现金流量表）及附注，基本面分析的核心对象",
+      "layer": "L2",
+      "domain": "投资分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "巴菲特",
+        "高盛",
+        "持仓"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP04",
+      "name": "高盛",
+      "definition": "全球领先的投资银行与证券机构，业务涵盖投行、交易、资产管理，美股市场核心主体",
+      "layer": "L3",
+      "domain": "市场主体",
+      "difficulty": "高级",
+      "confidence": 0.85,
+      "status": "confirmed",
+      "prerequisites": [
+        "美股"
+      ],
+      "related": [
+        "财报",
+        "巴菲特",
+        "ETF"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP05",
+      "name": "持仓",
+      "definition": "投资者当前持有的证券组合及头寸，是组合管理的基本单元",
+      "layer": "L2",
+      "domain": "组合管理",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "回撤",
+        "ETF",
+        "国债逆回购",
+        "新股"
+      ],
+      "scenarios": [
+        "资产配置",
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP06",
+      "name": "巴菲特",
+      "definition": "伯克希尔·哈撒韦董事长，价值投资代表人物，倡导长期持有、安全边际与亏损厌恶",
+      "layer": "L3",
+      "domain": "市场主体",
+      "difficulty": "高级",
+      "confidence": 0.85,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "回撤",
+        "高盛",
+        "持仓"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP07",
+      "name": "美股",
+      "definition": "在美国交易所（NYSE、NASDAQ）上市的股票总称，全球最大股票市场",
+      "layer": "L3",
+      "domain": "市场与品种",
+      "difficulty": "入门",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股",
+        "高盛",
+        "ETF",
+        "新股"
+      ],
+      "scenarios": [
+        "资产配置",
+        "打新"
+      ]
+    },
+    {
+      "id": "KP08",
+      "name": "A股",
+      "definition": "在中国大陆注册、沪深交易所上市、以人民币计价交易的普通股，中国主板股票市场",
+      "layer": "L3",
+      "domain": "市场与品种",
+      "difficulty": "入门",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "美股",
+        "ETF",
+        "新股",
+        "新债"
+      ],
+      "scenarios": [
+        "资产配置",
+        "打新"
+      ]
+    },
+    {
+      "id": "KP09",
+      "name": "ETF",
+      "definition": "交易所买卖基金，跟踪指数或资产组合，兼具开放式基金申赎与股票交易特性",
+      "layer": "L2",
+      "domain": "市场与品种",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "美股",
+        "A股"
+      ],
+      "related": [
+        "持仓",
+        "美股",
+        "A股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP10",
+      "name": "国债逆回购",
+      "definition": "以国债为抵押的短期资金融通，融出方获得固定利息，低风险现金管理工具",
+      "layer": "L2",
+      "domain": "组合管理",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "持仓",
+        "新债"
+      ],
+      "scenarios": [
+        "现金管理"
+      ]
+    },
+    {
+      "id": "KP11",
+      "name": "新股",
+      "definition": "公司首次公开发行并在交易所上市交易的股票，一级市场核心标的",
+      "layer": "L2",
+      "domain": "市场与品种",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "A股",
+        "美股"
+      ],
+      "related": [
+        "持仓",
+        "A股"
+      ],
+      "scenarios": [
+        "打新"
+      ]
+    },
+    {
+      "id": "KP12",
+      "name": "新债",
+      "definition": "新发行债券（含可转债、国债、企业债等），一级市场申购标的",
+      "layer": "L2",
+      "domain": "市场与品种",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "A股"
+      ],
+      "related": [
+        "国债逆回购",
+        "A股"
+      ],
+      "scenarios": [
+        "打新",
+        "现金管理"
+      ]
+    },
+    {
+      "id": "KP13",
+      "name": "一级市场",
+      "definition": "企业首次发行证券募资的市场，含IPO、增发等一级发行场所",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "新股",
+        "二级市场"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP14",
+      "name": "二级市场",
+      "definition": "已发行证券流通转让的市场，即股票交易所交易场所",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "一级市场",
+        "A股",
+        "美股"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP15",
+      "name": "牛市",
+      "definition": "市场主要指数持续上涨、投资者情绪乐观的阶段",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "交易执行",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP16",
+      "name": "熊市",
+      "definition": "市场主要指数持续下跌、情绪悲观的阶段",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "交易执行",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP17",
+      "name": "震荡市",
+      "definition": "方向不明、指数在区间内反复波动的市场阶段",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP18",
+      "name": "市值",
+      "definition": "公司总股本×股价的市场价值，衡量公司体量与权重",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP19",
+      "name": "流动性",
+      "definition": "资产变现的难易程度，高流动性易买卖且冲击成本低",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "成交量"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP20",
+      "name": "成交量",
+      "definition": "一定时间内成交的股票数量，反映市场交易活跃度",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "换手率",
+        "流动性"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP21",
+      "name": "换手率",
+      "definition": "成交量与流通股本的比率，衡量个股交易活跃程度",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "成交量"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP22",
+      "name": "波动率",
+      "definition": "价格变动的剧烈程度，常用收益率标准差衡量，是风险量化基础",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "回撤"
+      ],
+      "related": [
+        "回撤",
+        "风险溢价"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP23",
+      "name": "杠杆",
+      "definition": "借入资金放大头寸规模，同步放大收益与亏损的工具",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "保证金",
+        "做空"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP24",
+      "name": "做多",
+      "definition": "先买入后卖出、低买高卖的看涨交易方向",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "做空"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP25",
+      "name": "做空",
+      "definition": "借券卖出、待下跌后买回归还以获利的反向操作",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "杠杆"
+      ],
+      "related": [
+        "做多",
+        "保证金"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP26",
+      "name": "保证金",
+      "definition": "交易账户中作为履约担保的资金，是杠杆交易的基础",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "杠杆",
+        "做空"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP27",
+      "name": "熔断",
+      "definition": "指数波动触阈值时全盘暂停交易的极端风控机制",
+      "layer": "L1",
+      "domain": "市场基础",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP28",
+      "name": "收益率",
+      "definition": "投资盈亏占本金的比例，最基础的绩效衡量指标",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "年化收益率"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP29",
+      "name": "年化收益率",
+      "definition": "把任意持有期收益折算为年度化的可比收益率",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "收益率"
+      ],
+      "related": [
+        "CAGR"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP30",
+      "name": "CAGR",
+      "definition": "复合年均增长率，平滑波动后的几何平均增速",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "年化收益率",
+        "复利"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP31",
+      "name": "Alpha",
+      "definition": "超越业绩基准的超额收益，衡量选股与择时能力",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "收益率"
+      ],
+      "related": [
+        "Beta",
+        "夏普比率"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP32",
+      "name": "Beta",
+      "definition": "资产收益率对市场收益率的敏感度，衡量系统性风险暴露",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "收益率"
+      ],
+      "related": [
+        "Alpha"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP33",
+      "name": "夏普比率",
+      "definition": "单位总风险的超额收益，风险调整后收益的核心指标",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "收益率",
+        "波动率"
+      ],
+      "related": [
+        "索提诺比率",
+        "Calmar比率"
+      ],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP34",
+      "name": "索提诺比率",
+      "definition": "仅用下行波动调整的风险收益指标，对亏损更敏感",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "夏普比率"
+      ],
+      "related": [],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP35",
+      "name": "信息比率",
+      "definition": "主动收益对跟踪误差的比，衡量主动管理优劣",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "Alpha"
+      ],
+      "related": [],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP36",
+      "name": "Calmar比率",
+      "definition": "年化收益对最大回撤的比，在熊市中尤具参考性",
+      "layer": "L1",
+      "domain": "收益指标",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "夏普比率",
+        "回撤"
+      ],
+      "related": [],
+      "scenarios": [
+        "选股分析",
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP37",
+      "name": "系统性风险",
+      "definition": "影响整个市场、不可通过分散消除的风险（利率、政策等）",
+      "layer": "L1",
+      "domain": "风险",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "非系统性风险",
+        "Beta"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP38",
+      "name": "非系统性风险",
+      "definition": "个股或行业特有的、可通过分散投资消除的公司风险",
+      "layer": "L1",
+      "domain": "风险",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "系统性风险",
+        "分散投资"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP39",
+      "name": "黑天鹅",
+      "definition": "概率极低但冲击巨大的突发事件，源自分布肥尾",
+      "layer": "L1",
+      "domain": "风险",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "尾部风险"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP40",
+      "name": "灰犀牛",
+      "definition": "高概率却被普遍忽视的显性重大风险",
+      "layer": "L1",
+      "domain": "风险",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "系统性风险"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP41",
+      "name": "尾部风险",
+      "definition": "极端行情下分布尾部出现的大幅亏损风险",
+      "layer": "L1",
+      "domain": "风险",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "黑天鹅",
+        "VaR"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP42",
+      "name": "风险溢价",
+      "definition": "投资者承担额外风险所要求的补偿收益",
+      "layer": "L1",
+      "domain": "风险",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "波动率"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP43",
+      "name": "复利",
+      "definition": "利息再投资产生利滚利的增长效应，长期投资核心",
+      "layer": "L1",
+      "domain": "时间价值",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "CAGR",
+        "折现"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP44",
+      "name": "单利",
+      "definition": "仅对本金计息、利息不再滚存的计息方式",
+      "layer": "L1",
+      "domain": "时间价值",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "复利"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP45",
+      "name": "折现",
+      "definition": "将未来现金流按折现率折算为当前价值的反向过程",
+      "layer": "L1",
+      "domain": "时间价值",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "现值",
+        "复利"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP46",
+      "name": "现值",
+      "definition": "未来现金流按折现率折算的当前价值（PV）",
+      "layer": "L1",
+      "domain": "时间价值",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "折现"
+      ],
+      "related": [
+        "终值",
+        "净现值"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP47",
+      "name": "终值",
+      "definition": "当前资金按复利滚动增长到的未来价值（FV）",
+      "layer": "L1",
+      "domain": "时间价值",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "现值",
+        "复利"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP48",
+      "name": "内部收益率",
+      "definition": "使项目净现值等于零的折现率（IRR）",
+      "layer": "L1",
+      "domain": "时间价值",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "净现值"
+      ],
+      "related": [
+        "折现"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP49",
+      "name": "净现值",
+      "definition": "未来现金流现值减去初始投资的差额（NPV）",
+      "layer": "L1",
+      "domain": "时间价值",
+      "difficulty": "基础",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "现值"
+      ],
+      "related": [
+        "内部收益率"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP50",
+      "name": "市盈率",
+      "definition": "股价/每股收益，最常用的相对估值指标（PE）",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报",
+        "EPS"
+      ],
+      "related": [
+        "市净率"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP51",
+      "name": "市净率",
+      "definition": "股价/每股净资产，衡量账面估值的安全边际（PB）",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "市盈率"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP52",
+      "name": "市销率",
+      "definition": "总市值/营业收入，适用于未盈利成长股的估值（PS）",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP53",
+      "name": "PEG",
+      "definition": "市盈率/盈利增速，兼顾估值与成长的指标",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "市盈率"
+      ],
+      "related": [
+        "成长股"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP54",
+      "name": "EV/EBITDA",
+      "definition": "企业价值/息税折旧摊销前利润，跨资本结构可比估值",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP55",
+      "name": "股息率",
+      "definition": "每股分红/股价，衡量持股的现金回报水平",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "REITs"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP56",
+      "name": "ROE",
+      "definition": "净利润/净资产，衡量股东资本回报率",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "ROA",
+        "净利率"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP57",
+      "name": "ROA",
+      "definition": "净利润/总资产，衡量资产综合利用效率",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "ROE"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP58",
+      "name": "毛利率",
+      "definition": "(营收-营业成本)/营收，反映产品盈利能力",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP59",
+      "name": "净利率",
+      "definition": "净利润/营收，反映综合盈利水平",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "ROE"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP60",
+      "name": "自由现金流",
+      "definition": "企业可自由支配的经营性现金流，DCF估值核心",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报",
+        "经营现金流"
+      ],
+      "related": [
+        "DCF估值"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP61",
+      "name": "经营现金流",
+      "definition": "主营业务活动产生的现金流量",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "现金流量表"
+      ],
+      "related": [],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP62",
+      "name": "EPS",
+      "definition": "每股收益，每股对应的盈利金额",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "市盈率"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP63",
+      "name": "每股净资产",
+      "definition": "净资产/总股本，每股对应的账面权益价值",
+      "layer": "L2",
+      "domain": "股票分析",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "财报"
+      ],
+      "related": [
+        "市净率"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP64",
+      "name": "资产负债表",
+      "definition": "反映特定时点资产、负债与所有者权益的报表",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "财报"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP65",
+      "name": "利润表",
+      "definition": "反映一定期间收入、成本与利润的报表",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "财报"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP66",
+      "name": "现金流量表",
+      "definition": "反映期间现金流入流出的报表，分经营/投资/筹资",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "财报",
+        "经营现金流"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP67",
+      "name": "商誉",
+      "definition": "并购溢价形成的无形资产，需定期减值测试",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "资产负债表"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP68",
+      "name": "存货",
+      "definition": "企业持有待售或生产中的货物，流动资产项",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "资产负债表"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP69",
+      "name": "应收账款",
+      "definition": "已售出尚未收回的款项，流动资产项",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "资产负债表"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP70",
+      "name": "固定资产",
+      "definition": "长期使用厂房设备等非流动资产",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "资产负债表",
+        "折旧"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP71",
+      "name": "折旧",
+      "definition": "固定资产价值按使用期分摊计入的成本",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "固定资产",
+        "摊销"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP72",
+      "name": "摊销",
+      "definition": "无形资产或长期待摊费用按期分摊的费用",
+      "layer": "L2",
+      "domain": "财务报表",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "折旧"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP73",
+      "name": "LOF",
+      "definition": "上市开放式基金，可场内交易也可场外申赎",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "ETF",
+        "指数基金"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP74",
+      "name": "REITs",
+      "definition": "不动产投资信托，持有物业收租并分红",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "股息率"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP75",
+      "name": "可转债",
+      "definition": "可转换为股票的债券，兼具债底与看涨期权",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "债券"
+      ],
+      "related": [
+        "新债"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP76",
+      "name": "债券",
+      "definition": "发行人承诺按期还本付息的债务凭证",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "国债",
+        "公司债",
+        "可转债"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP77",
+      "name": "公司债",
+      "definition": "非金融企业发行的债券，信用风险高于利率债",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "债券"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP78",
+      "name": "国债",
+      "definition": "中央政府发行的债券，几乎无信用风险，利率锚",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "国债逆回购",
+        "债券"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP79",
+      "name": "可交换债",
+      "definition": "股东以其所持股票为标的发行的交换债",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "可转债",
+        "债券"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP80",
+      "name": "货币基金",
+      "definition": "投资短债与货币工具的低风险基金，近似现金",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "国债逆回购"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP81",
+      "name": "指数基金",
+      "definition": "跟踪特定指数表现的被动型基金",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "沪深300"
+      ],
+      "related": [
+        "ETF",
+        "定投"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP82",
+      "name": "QDII",
+      "definition": "合格境内机构投资者，可投海外市场的基金",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "美股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP83",
+      "name": "FOF",
+      "definition": "投资基金的基金，进一步分散配置基金组合",
+      "layer": "L2",
+      "domain": "投资工具",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "公募基金"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP84",
+      "name": "上证指数",
+      "definition": "上交所全部上市股票加权编制的市场指数",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP85",
+      "name": "深证成指",
+      "definition": "深交所代表性成分股加权指数",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP86",
+      "name": "创业板指",
+      "definition": "创业板高成长成分股指数",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP87",
+      "name": "科创50",
+      "definition": "科创板50只龙头硬科技公司指数",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP88",
+      "name": "沪深300",
+      "definition": "沪深两市300只大盘股指数，A股晴雨表",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股",
+        "ETF"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP89",
+      "name": "中证500",
+      "definition": "剔除沪深300后500只中盘股指数",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP90",
+      "name": "中证1000",
+      "definition": "小盘1000只股票指数，代表小微盘风格",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP91",
+      "name": "纳斯达克100",
+      "definition": "美股科技龙头100只非金融股指数",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "美股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP92",
+      "name": "标普500",
+      "definition": "美股500只大盘股宽基指数，全球配置基准",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "美股",
+        "ETF"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP93",
+      "name": "道琼斯指数",
+      "definition": "美股30只蓝筹工业股价格指数",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "美股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP94",
+      "name": "恒生指数",
+      "definition": "香港主板蓝筹股指数，反映港股大盘",
+      "layer": "L2",
+      "domain": "指数",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "资产配置"
+      ]
+    },
+    {
+      "id": "KP95",
+      "name": "涨停",
+      "definition": "股价单日上涨达上限（A股一般±10%）并封板",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股",
+        "跌停"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP96",
+      "name": "跌停",
+      "definition": "股价单日下跌达下限并封板",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股",
+        "涨停"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP97",
+      "name": "集合竞价",
+      "definition": "开盘前集中撮合、一次性定价的交易时段",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP98",
+      "name": "连板",
+      "definition": "股票连续多个交易日涨停的强势状态",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "涨停",
+        "打板"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP99",
+      "name": "打板",
+      "definition": "以涨停价追买封板股票的高风险短线手法",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "涨停",
+        "连板"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP100",
+      "name": "止盈",
+      "definition": "达到目标收益后卖出以锁定利润",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "交易执行",
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP101",
+      "name": "止损",
+      "definition": "价格跌破止损位即卖出以控制亏损",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "回撤"
+      ],
+      "scenarios": [
+        "交易执行",
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP102",
+      "name": "仓位",
+      "definition": "持仓市值占可用资金的比例，风险敞口核心",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "满仓",
+        "空仓"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP103",
+      "name": "满仓",
+      "definition": "全部资金买入、不保留现金的状态",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "仓位"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP104",
+      "name": "空仓",
+      "definition": "不持有任何头寸、全部为现金的状态",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "仓位"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP105",
+      "name": "加仓",
+      "definition": "上涨途中追加买入以扩大头寸",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "仓位"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP106",
+      "name": "减仓",
+      "definition": "卖出部分持仓以降低头寸与风险",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "仓位"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP107",
+      "name": "网格交易",
+      "definition": "在划定区间内高抛低吸的量化波段策略",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP108",
+      "name": "定投",
+      "definition": "定期定额买入以摊低成本的纪律策略",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "指数基金"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP109",
+      "name": "再平衡",
+      "definition": "调回目标配比的纪律操作，控制偏离",
+      "layer": "L2",
+      "domain": "交易",
+      "difficulty": "进阶",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "仓位"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP110",
+      "name": "内在价值",
+      "definition": "企业真实公允的价值，价格长期围绕其波动",
+      "layer": "L3",
+      "domain": "价值投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "安全边际",
+        "巴菲特"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP111",
+      "name": "护城河",
+      "definition": "企业可持续的竞争优势壁垒，保障长期盈利",
+      "layer": "L3",
+      "domain": "价值投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "巴菲特",
+        "ROE"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP112",
+      "name": "DCF估值",
+      "definition": "自由现金流折现估值模型，估算内在价值",
+      "layer": "L3",
+      "domain": "价值投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "自由现金流",
+        "折现"
+      ],
+      "related": [
+        "内在价值"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP113",
+      "name": "芒格",
+      "definition": "巴菲特搭档，倡导多元思维模型的投资家",
+      "layer": "L3",
+      "domain": "价值投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "巴菲特",
+        "能力圈"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP114",
+      "name": "格雷厄姆",
+      "definition": "价值投资之父，安全边际理念提出者",
+      "layer": "L3",
+      "domain": "价值投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "巴菲特",
+        "安全边际"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP115",
+      "name": "安全边际",
+      "definition": "价格低于内在价值的缓冲空间，防守之本",
+      "layer": "L3",
+      "domain": "价值投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "内在价值",
+        "巴菲特"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP116",
+      "name": "能力圈",
+      "definition": "只投资自己真正理解领域的自律原则",
+      "layer": "L3",
+      "domain": "价值投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "巴菲特",
+        "芒格"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP117",
+      "name": "成长股",
+      "definition": "业绩与预期高速增长的公司股票",
+      "layer": "L3",
+      "domain": "成长投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "PEG",
+        "龙头股"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP118",
+      "name": "龙头股",
+      "definition": "行业中份额与地位领先的公司股票",
+      "layer": "L3",
+      "domain": "成长投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "成长股"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP119",
+      "name": "景气周期",
+      "definition": "行业供需繁荣与衰退交替的循环阶段",
+      "layer": "L3",
+      "domain": "成长投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "新能源"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP120",
+      "name": "TAM",
+      "definition": "潜在市场总规模，衡量成长空间上限",
+      "layer": "L3",
+      "domain": "成长投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "渗透率"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP121",
+      "name": "渗透率",
+      "definition": "产品在市场中的普及程度，决定成长阶段",
+      "layer": "L3",
+      "domain": "成长投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "TAM",
+        "成长股"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP122",
+      "name": "GDP",
+      "definition": "国内生产总值，衡量经济总量的核心指标",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "CPI"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP123",
+      "name": "CPI",
+      "definition": "居民消费价格指数，衡量通胀水平",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "通货膨胀",
+        "GDP"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP124",
+      "name": "PPI",
+      "definition": "工业生产者出厂价格指数，上游价格信号",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "CPI"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP125",
+      "name": "PMI",
+      "definition": "采购经理指数，经济景气的先行指标",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "GDP"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP126",
+      "name": "利率",
+      "definition": "资金的价格，资产定价的锚与估值分母",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "通货膨胀",
+        "美联储"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP127",
+      "name": "美联储",
+      "definition": "美国中央银行，制定货币政策的核心机构",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "利率",
+        "加息"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP128",
+      "name": "降息",
+      "definition": "下调基准利率以刺激经济的操作",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "利率"
+      ],
+      "related": [
+        "美联储"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP129",
+      "name": "加息",
+      "definition": "上调基准利率以抑制通胀的操作",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "利率"
+      ],
+      "related": [
+        "美联储"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP130",
+      "name": "通货膨胀",
+      "definition": "物价持续普遍上涨、货币购买力下降",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "CPI",
+        "利率"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP131",
+      "name": "通货紧缩",
+      "definition": "物价持续下跌、需求萎缩的经济状态",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "CPI"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP132",
+      "name": "汇率",
+      "definition": "两国货币间的兑换比价，影响跨境资产",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "美元指数"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP133",
+      "name": "美元指数",
+      "definition": "美元对一篮子货币的汇率强弱指标",
+      "layer": "L3",
+      "domain": "宏观投资",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "汇率",
+        "美联储"
+      ],
+      "scenarios": [
+        "宏观研究"
+      ]
+    },
+    {
+      "id": "KP134",
+      "name": "半导体",
+      "definition": "芯片设计制造产业链，科技成长核心赛道",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "AI",
+        "成长股"
+      ],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP135",
+      "name": "AI",
+      "definition": "人工智能产业，当前科技成长主线",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "半导体"
+      ],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP136",
+      "name": "新能源",
+      "definition": "光伏、锂电等清洁能源行业，高景气赛道",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "成长股"
+      ],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP137",
+      "name": "医药",
+      "definition": "生物医药与健康服务行业，防御成长兼备",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "消费"
+      ],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP138",
+      "name": "消费",
+      "definition": "食品饮料等必需与可选消费行业",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "医药"
+      ],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP139",
+      "name": "银行",
+      "definition": "金融板块，利润对利率与资产质量敏感",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "利率"
+      ],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP140",
+      "name": "地产",
+      "definition": "房地产产业链，对政策与利率高度敏感",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "利率"
+      ],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP141",
+      "name": "军工",
+      "definition": "国防军工行业，受装备周期与战略驱动",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP142",
+      "name": "有色",
+      "definition": "有色金属资源行业，强周期品属性",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP143",
+      "name": "煤炭",
+      "definition": "能源周期行业，受供需与价格在周期波动",
+      "layer": "L3",
+      "domain": "行业分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [],
+      "scenarios": [
+        "行业研究"
+      ]
+    },
+    {
+      "id": "KP144",
+      "name": "北向资金",
+      "definition": "外资经沪深港通净买入A股的资金流向",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股",
+        "主力资金"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP145",
+      "name": "南向资金",
+      "definition": "内资经港股通净买入港股的资金流向",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "A股"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP146",
+      "name": "主力资金",
+      "definition": "机构大单资金流向，反映主力态度",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "北向资金",
+        "游资"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP147",
+      "name": "游资",
+      "definition": "短线活跃的私募与大户资金，偏好题材",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "主力资金",
+        "打板"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP148",
+      "name": "社保基金",
+      "definition": "全国社保理事会管理的稳健长线资金",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "公募基金"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP149",
+      "name": "公募基金",
+      "definition": "公开募集的证券投资基金，市场主力机构",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "私募基金",
+        "ETF"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP150",
+      "name": "私募基金",
+      "definition": "非公开募集的对冲或股权投资基金",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "公募基金"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP151",
+      "name": "QFII",
+      "definition": "合格境外机构投资者，获额度投A股的外资",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "北向资金"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP152",
+      "name": "ETF资金流",
+      "definition": "ETF申赎净额反映的资产配置风向",
+      "layer": "L3",
+      "domain": "资金分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "ETF",
+        "主力资金"
+      ],
+      "scenarios": [
+        "选股分析"
+      ]
+    },
+    {
+      "id": "KP153",
+      "name": "K线",
+      "definition": "含开盘/最高/最低/收盘的蜡烛图，技术分析基础",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "均线"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP154",
+      "name": "均线",
+      "definition": "某周期均价连成的趋势线（如MA20）",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "K线"
+      ],
+      "related": [
+        "MACD",
+        "趋势线"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP155",
+      "name": "MACD",
+      "definition": "指数平滑异同移动平均，判趋势与动能",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "均线"
+      ],
+      "related": [
+        "RSI"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP156",
+      "name": "RSI",
+      "definition": "相对强弱指标，衡量超买超卖",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "MACD"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP157",
+      "name": "布林带",
+      "definition": "围绕均线上下轨的波动通道",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "均线",
+        "波动率"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP158",
+      "name": "趋势线",
+      "definition": "连接高低点判断方向的参考线",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "支撑位",
+        "压力位"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP159",
+      "name": "支撑位",
+      "definition": "下跌中买盘集中、易止跌的价位",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "趋势线",
+        "压力位"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP160",
+      "name": "压力位",
+      "definition": "上涨中卖压集中、易回落的价位",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "趋势线",
+        "支撑位"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP161",
+      "name": "成交量分析",
+      "definition": "配合价格看量能，确认趋势真伪",
+      "layer": "L3",
+      "domain": "技术分析",
+      "difficulty": "高级",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "成交量",
+        "K线"
+      ],
+      "scenarios": [
+        "交易执行"
+      ]
+    },
+    {
+      "id": "KP162",
+      "name": "仓位管理",
+      "definition": "按风险与信号分配头寸规模的方法",
+      "layer": "L4",
+      "domain": "风险管理",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "仓位",
+        "VaR"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP163",
+      "name": "凯利公式",
+      "definition": "在已知胜率赔率下最大化长期增长的仓位比例",
+      "layer": "L4",
+      "domain": "风险管理",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "仓位管理"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP164",
+      "name": "VaR",
+      "definition": "在一定置信度与期限内的最大可能损失",
+      "layer": "L4",
+      "domain": "风险管理",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "波动率"
+      ],
+      "related": [
+        "尾部风险",
+        "风险预算"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP165",
+      "name": "风险预算",
+      "definition": "给各资产分配风险额度的配置框架",
+      "layer": "L4",
+      "domain": "风险管理",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "VaR",
+        "风险暴露"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP166",
+      "name": "风险暴露",
+      "definition": "组合对特定风险因子的敞口大小",
+      "layer": "L4",
+      "domain": "风险管理",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "VaR"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP167",
+      "name": "压力测试",
+      "definition": "极端情景下模拟组合损失与韧性的方法",
+      "layer": "L4",
+      "domain": "风险管理",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "VaR"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP168",
+      "name": "对冲",
+      "definition": "用反向头寸抵消特定风险的手段",
+      "layer": "L4",
+      "domain": "风险管理",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "风险暴露"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP169",
+      "name": "分散投资",
+      "definition": "跨资产跨标的降低非系统性风险的策略",
+      "layer": "L4",
+      "domain": "风险管理",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [
+        "非系统性风险"
+      ],
+      "related": [
+        "风险预算"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP170",
+      "name": "信息披露",
+      "definition": "上市公司依法公开重大信息的义务",
+      "layer": "L4",
+      "domain": "合规",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "内幕交易",
+        "财报"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP171",
+      "name": "内幕交易",
+      "definition": "利用未公开重大信息交易的违法行为",
+      "layer": "L4",
+      "domain": "合规",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "信息披露"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP172",
+      "name": "市场操纵",
+      "definition": "人为影响价格诱导交易的违法违规行为",
+      "layer": "L4",
+      "domain": "合规",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "内幕交易"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP173",
+      "name": "投资者适当性",
+      "definition": "将产品风险匹配客户承受能力的制度",
+      "layer": "L4",
+      "domain": "合规",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "KYC"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP174",
+      "name": "反洗钱",
+      "definition": "防范非法资金洗白的合规要求（AML）",
+      "layer": "L4",
+      "domain": "合规",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "KYC"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP175",
+      "name": "KYC",
+      "definition": "客户身份识别与尽职调查，合规第一关",
+      "layer": "L4",
+      "domain": "合规",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "投资者适当性",
+        "反洗钱"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP176",
+      "name": "合规审计",
+      "definition": "对合规制度执行情况的独立检查",
+      "layer": "L4",
+      "domain": "合规",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "信息披露"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP177",
+      "name": "投资计划",
+      "definition": "事前制定的目标、策略与风控方案",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "交易复盘"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP178",
+      "name": "投资日志",
+      "definition": "记录每笔交易与决策心路的过程文件",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "交易复盘"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP179",
+      "name": "回测",
+      "definition": "用历史数据验证策略有效性的方法",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "投资计划"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP180",
+      "name": "交易复盘",
+      "definition": "盘后总结得失、修正系统的反思动作",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "投资日志",
+        "投资计划"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP181",
+      "name": "行为金融",
+      "definition": "研究心理偏差如何影响投资决策的学科",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "损失厌恶",
+        "过度自信"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP182",
+      "name": "FOMO",
+      "definition": "错失恐惧驱动的追涨非理性行为",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "行为金融"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP183",
+      "name": "锚定效应",
+      "definition": "过度依赖初始参考价做决策的偏差",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "行为金融"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP184",
+      "name": "损失厌恶",
+      "definition": "亏损痛苦强于等额盈利的心理偏好",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "行为金融"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    },
+    {
+      "id": "KP185",
+      "name": "过度自信",
+      "definition": "高估自身判断准确性的认知偏差",
+      "layer": "L4",
+      "domain": "投资纪律",
+      "difficulty": "专家",
+      "confidence": 0.9,
+      "status": "confirmed",
+      "prerequisites": [],
+      "related": [
+        "行为金融"
+      ],
+      "scenarios": [
+        "风险管理"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "KP01",
+      "target": "KP02",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(需复权价计算)"
+    },
+    {
+      "source": "KP01",
+      "target": "KP05",
+      "type": "association",
+      "weight": 0.7,
+      "label": "关联(持仓风险)"
+    },
+    {
+      "source": "KP01",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(亏损厌恶哲学)"
+    },
+    {
+      "source": "KP02",
+      "target": "KP03",
+      "type": "subordinate",
+      "weight": 0.6,
+      "label": "从属(价格分析技术)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP05",
+      "type": "dependency",
+      "weight": 0.7,
+      "label": "依赖(分析指导持仓)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.8,
+      "label": "关联(价值投资读财报)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP04",
+      "type": "association",
+      "weight": 0.6,
+      "label": "关联(卖方研究)"
+    },
+    {
+      "source": "KP05",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.6,
+      "label": "关联(持有ETF)"
+    },
+    {
+      "source": "KP05",
+      "target": "KP10",
+      "type": "association",
+      "weight": 0.6,
+      "label": "关联(闲钱现金管理)"
+    },
+    {
+      "source": "KP06",
+      "target": "KP04",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(08年注资高盛)"
+    },
+    {
+      "source": "KP07",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(跨市场比较)"
+    },
+    {
+      "source": "KP07",
+      "target": "KP04",
+      "type": "association",
+      "weight": 0.7,
+      "label": "关联(高盛在美股)"
+    },
+    {
+      "source": "KP07",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.7,
+      "label": "关联(美股ETF)"
+    },
+    {
+      "source": "KP07",
+      "target": "KP11",
+      "type": "association",
+      "weight": 0.6,
+      "label": "关联(美股IPO)"
+    },
+    {
+      "source": "KP08",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.7,
+      "label": "关联(A股ETF)"
+    },
+    {
+      "source": "KP08",
+      "target": "KP11",
+      "type": "association",
+      "weight": 0.7,
+      "label": "关联(A股打新)"
+    },
+    {
+      "source": "KP08",
+      "target": "KP12",
+      "type": "association",
+      "weight": 0.6,
+      "label": "关联(A股打债/转债)"
+    },
+    {
+      "source": "KP09",
+      "target": "KP05",
+      "type": "composition",
+      "weight": 0.6,
+      "label": "组成(ETF是持仓成分)"
+    },
+    {
+      "source": "KP10",
+      "target": "KP05",
+      "type": "composition",
+      "weight": 0.7,
+      "label": "组成(现金管理入组合)"
+    },
+    {
+      "source": "KP10",
+      "target": "KP12",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(均属固收)"
+    },
+    {
+      "source": "KP11",
+      "target": "KP05",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(新股入持仓)"
+    },
+    {
+      "source": "KP12",
+      "target": "KP10",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(均属固收)"
+    },
+    {
+      "source": "KP13",
+      "target": "KP11",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(一级市场~新股)"
+    },
+    {
+      "source": "KP13",
+      "target": "KP14",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(一级市场~二级市场)"
+    },
+    {
+      "source": "KP14",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(二级市场~A股)"
+    },
+    {
+      "source": "KP14",
+      "target": "KP07",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(二级市场~美股)"
+    },
+    {
+      "source": "KP18",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(市值~A股)"
+    },
+    {
+      "source": "KP19",
+      "target": "KP20",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(流动性~成交量)"
+    },
+    {
+      "source": "KP20",
+      "target": "KP21",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(成交量~换手率)"
+    },
+    {
+      "source": "KP01",
+      "target": "KP22",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(回撤→波动率)"
+    },
+    {
+      "source": "KP22",
+      "target": "KP01",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(波动率~回撤)"
+    },
+    {
+      "source": "KP22",
+      "target": "KP42",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(波动率~风险溢价)"
+    },
+    {
+      "source": "KP23",
+      "target": "KP26",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(杠杆~保证金)"
+    },
+    {
+      "source": "KP23",
+      "target": "KP25",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(杠杆~做空)"
+    },
+    {
+      "source": "KP24",
+      "target": "KP25",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(做多~做空)"
+    },
+    {
+      "source": "KP23",
+      "target": "KP25",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(杠杆→做空)"
+    },
+    {
+      "source": "KP25",
+      "target": "KP26",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(做空~保证金)"
+    },
+    {
+      "source": "KP28",
+      "target": "KP29",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(收益率~年化收益率)"
+    },
+    {
+      "source": "KP28",
+      "target": "KP29",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(收益率→年化收益率)"
+    },
+    {
+      "source": "KP29",
+      "target": "KP30",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(年化收益率~CAGR)"
+    },
+    {
+      "source": "KP30",
+      "target": "KP43",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(CAGR~复利)"
+    },
+    {
+      "source": "KP28",
+      "target": "KP31",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(收益率→Alpha)"
+    },
+    {
+      "source": "KP31",
+      "target": "KP32",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(Alpha~Beta)"
+    },
+    {
+      "source": "KP31",
+      "target": "KP33",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(Alpha~夏普比率)"
+    },
+    {
+      "source": "KP28",
+      "target": "KP32",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(收益率→Beta)"
+    },
+    {
+      "source": "KP28",
+      "target": "KP33",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(收益率→夏普比率)"
+    },
+    {
+      "source": "KP22",
+      "target": "KP33",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(波动率→夏普比率)"
+    },
+    {
+      "source": "KP33",
+      "target": "KP34",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(夏普比率~索提诺比率)"
+    },
+    {
+      "source": "KP33",
+      "target": "KP36",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(夏普比率~Calmar比率)"
+    },
+    {
+      "source": "KP33",
+      "target": "KP34",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(夏普比率→索提诺比率)"
+    },
+    {
+      "source": "KP31",
+      "target": "KP35",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(Alpha→信息比率)"
+    },
+    {
+      "source": "KP33",
+      "target": "KP36",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(夏普比率→Calmar比率)"
+    },
+    {
+      "source": "KP01",
+      "target": "KP36",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(回撤→Calmar比率)"
+    },
+    {
+      "source": "KP37",
+      "target": "KP38",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(系统性风险~非系统性风险)"
+    },
+    {
+      "source": "KP37",
+      "target": "KP32",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(系统性风险~Beta)"
+    },
+    {
+      "source": "KP38",
+      "target": "KP169",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(非系统性风险~分散投资)"
+    },
+    {
+      "source": "KP39",
+      "target": "KP41",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(黑天鹅~尾部风险)"
+    },
+    {
+      "source": "KP40",
+      "target": "KP37",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(灰犀牛~系统性风险)"
+    },
+    {
+      "source": "KP41",
+      "target": "KP164",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(尾部风险~VaR)"
+    },
+    {
+      "source": "KP43",
+      "target": "KP45",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(复利~折现)"
+    },
+    {
+      "source": "KP44",
+      "target": "KP43",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(单利~复利)"
+    },
+    {
+      "source": "KP45",
+      "target": "KP46",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(折现~现值)"
+    },
+    {
+      "source": "KP45",
+      "target": "KP46",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(折现→现值)"
+    },
+    {
+      "source": "KP46",
+      "target": "KP47",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(现值~终值)"
+    },
+    {
+      "source": "KP46",
+      "target": "KP49",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(现值~净现值)"
+    },
+    {
+      "source": "KP47",
+      "target": "KP43",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(终值~复利)"
+    },
+    {
+      "source": "KP49",
+      "target": "KP48",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(净现值→内部收益率)"
+    },
+    {
+      "source": "KP48",
+      "target": "KP45",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(内部收益率~折现)"
+    },
+    {
+      "source": "KP46",
+      "target": "KP49",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(现值→净现值)"
+    },
+    {
+      "source": "KP49",
+      "target": "KP48",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(净现值~内部收益率)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP50",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→市盈率)"
+    },
+    {
+      "source": "KP62",
+      "target": "KP50",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(EPS→市盈率)"
+    },
+    {
+      "source": "KP50",
+      "target": "KP51",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(市盈率~市净率)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP51",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→市净率)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP52",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→市销率)"
+    },
+    {
+      "source": "KP50",
+      "target": "KP53",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(市盈率→PEG)"
+    },
+    {
+      "source": "KP53",
+      "target": "KP117",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(PEG~成长股)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP54",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→EV/EBITDA)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP55",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→股息率)"
+    },
+    {
+      "source": "KP55",
+      "target": "KP74",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(股息率~REITs)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP56",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→ROE)"
+    },
+    {
+      "source": "KP56",
+      "target": "KP57",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(ROE~ROA)"
+    },
+    {
+      "source": "KP56",
+      "target": "KP59",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(ROE~净利率)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP57",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→ROA)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP58",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→毛利率)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP59",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→净利率)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP60",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→自由现金流)"
+    },
+    {
+      "source": "KP61",
+      "target": "KP60",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(经营现金流→自由现金流)"
+    },
+    {
+      "source": "KP60",
+      "target": "KP112",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(自由现金流~DCF估值)"
+    },
+    {
+      "source": "KP66",
+      "target": "KP61",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(现金流量表→经营现金流)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP62",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→EPS)"
+    },
+    {
+      "source": "KP62",
+      "target": "KP50",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(EPS~市盈率)"
+    },
+    {
+      "source": "KP03",
+      "target": "KP63",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(财报→每股净资产)"
+    },
+    {
+      "source": "KP63",
+      "target": "KP51",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(每股净资产~市净率)"
+    },
+    {
+      "source": "KP64",
+      "target": "KP03",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(资产负债表~财报)"
+    },
+    {
+      "source": "KP65",
+      "target": "KP03",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(利润表~财报)"
+    },
+    {
+      "source": "KP66",
+      "target": "KP03",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(现金流量表~财报)"
+    },
+    {
+      "source": "KP66",
+      "target": "KP61",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(现金流量表~经营现金流)"
+    },
+    {
+      "source": "KP67",
+      "target": "KP64",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(商誉~资产负债表)"
+    },
+    {
+      "source": "KP68",
+      "target": "KP64",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(存货~资产负债表)"
+    },
+    {
+      "source": "KP69",
+      "target": "KP64",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(应收账款~资产负债表)"
+    },
+    {
+      "source": "KP70",
+      "target": "KP64",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(固定资产~资产负债表)"
+    },
+    {
+      "source": "KP70",
+      "target": "KP71",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(固定资产~折旧)"
+    },
+    {
+      "source": "KP71",
+      "target": "KP72",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(折旧~摊销)"
+    },
+    {
+      "source": "KP73",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(LOF~ETF)"
+    },
+    {
+      "source": "KP73",
+      "target": "KP81",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(LOF~指数基金)"
+    },
+    {
+      "source": "KP76",
+      "target": "KP75",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(债券→可转债)"
+    },
+    {
+      "source": "KP75",
+      "target": "KP12",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(可转债~新债)"
+    },
+    {
+      "source": "KP76",
+      "target": "KP78",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(债券~国债)"
+    },
+    {
+      "source": "KP76",
+      "target": "KP77",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(债券~公司债)"
+    },
+    {
+      "source": "KP76",
+      "target": "KP75",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(债券~可转债)"
+    },
+    {
+      "source": "KP78",
+      "target": "KP10",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(国债~国债逆回购)"
+    },
+    {
+      "source": "KP79",
+      "target": "KP75",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(可交换债~可转债)"
+    },
+    {
+      "source": "KP79",
+      "target": "KP76",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(可交换债~债券)"
+    },
+    {
+      "source": "KP80",
+      "target": "KP10",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(货币基金~国债逆回购)"
+    },
+    {
+      "source": "KP88",
+      "target": "KP81",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(沪深300→指数基金)"
+    },
+    {
+      "source": "KP81",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(指数基金~ETF)"
+    },
+    {
+      "source": "KP81",
+      "target": "KP108",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(指数基金~定投)"
+    },
+    {
+      "source": "KP82",
+      "target": "KP07",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(QDII~美股)"
+    },
+    {
+      "source": "KP83",
+      "target": "KP149",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(FOF~公募基金)"
+    },
+    {
+      "source": "KP84",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(上证指数~A股)"
+    },
+    {
+      "source": "KP85",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(深证成指~A股)"
+    },
+    {
+      "source": "KP86",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(创业板指~A股)"
+    },
+    {
+      "source": "KP87",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(科创50~A股)"
+    },
+    {
+      "source": "KP88",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(沪深300~A股)"
+    },
+    {
+      "source": "KP88",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(沪深300~ETF)"
+    },
+    {
+      "source": "KP89",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(中证500~A股)"
+    },
+    {
+      "source": "KP90",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(中证1000~A股)"
+    },
+    {
+      "source": "KP91",
+      "target": "KP07",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(纳斯达克100~美股)"
+    },
+    {
+      "source": "KP92",
+      "target": "KP07",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(标普500~美股)"
+    },
+    {
+      "source": "KP92",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(标普500~ETF)"
+    },
+    {
+      "source": "KP93",
+      "target": "KP07",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(道琼斯指数~美股)"
+    },
+    {
+      "source": "KP94",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(恒生指数~A股)"
+    },
+    {
+      "source": "KP95",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(涨停~A股)"
+    },
+    {
+      "source": "KP95",
+      "target": "KP96",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(涨停~跌停)"
+    },
+    {
+      "source": "KP96",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(跌停~A股)"
+    },
+    {
+      "source": "KP98",
+      "target": "KP95",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(连板~涨停)"
+    },
+    {
+      "source": "KP98",
+      "target": "KP99",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(连板~打板)"
+    },
+    {
+      "source": "KP99",
+      "target": "KP95",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(打板~涨停)"
+    },
+    {
+      "source": "KP101",
+      "target": "KP01",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(止损~回撤)"
+    },
+    {
+      "source": "KP102",
+      "target": "KP103",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(仓位~满仓)"
+    },
+    {
+      "source": "KP102",
+      "target": "KP104",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(仓位~空仓)"
+    },
+    {
+      "source": "KP105",
+      "target": "KP102",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(加仓~仓位)"
+    },
+    {
+      "source": "KP106",
+      "target": "KP102",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(减仓~仓位)"
+    },
+    {
+      "source": "KP109",
+      "target": "KP102",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(再平衡~仓位)"
+    },
+    {
+      "source": "KP110",
+      "target": "KP115",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(内在价值~安全边际)"
+    },
+    {
+      "source": "KP110",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(内在价值~巴菲特)"
+    },
+    {
+      "source": "KP111",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(护城河~巴菲特)"
+    },
+    {
+      "source": "KP111",
+      "target": "KP56",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(护城河~ROE)"
+    },
+    {
+      "source": "KP60",
+      "target": "KP112",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(自由现金流→DCF估值)"
+    },
+    {
+      "source": "KP45",
+      "target": "KP112",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(折现→DCF估值)"
+    },
+    {
+      "source": "KP112",
+      "target": "KP110",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(DCF估值~内在价值)"
+    },
+    {
+      "source": "KP113",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(芒格~巴菲特)"
+    },
+    {
+      "source": "KP113",
+      "target": "KP116",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(芒格~能力圈)"
+    },
+    {
+      "source": "KP114",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(格雷厄姆~巴菲特)"
+    },
+    {
+      "source": "KP114",
+      "target": "KP115",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(格雷厄姆~安全边际)"
+    },
+    {
+      "source": "KP115",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(安全边际~巴菲特)"
+    },
+    {
+      "source": "KP116",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(能力圈~巴菲特)"
+    },
+    {
+      "source": "KP117",
+      "target": "KP118",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(成长股~龙头股)"
+    },
+    {
+      "source": "KP119",
+      "target": "KP136",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(景气周期~新能源)"
+    },
+    {
+      "source": "KP120",
+      "target": "KP121",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(TAM~渗透率)"
+    },
+    {
+      "source": "KP121",
+      "target": "KP117",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(渗透率~成长股)"
+    },
+    {
+      "source": "KP122",
+      "target": "KP123",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(GDP~CPI)"
+    },
+    {
+      "source": "KP123",
+      "target": "KP130",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(CPI~通货膨胀)"
+    },
+    {
+      "source": "KP124",
+      "target": "KP123",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(PPI~CPI)"
+    },
+    {
+      "source": "KP125",
+      "target": "KP122",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(PMI~GDP)"
+    },
+    {
+      "source": "KP126",
+      "target": "KP130",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(利率~通货膨胀)"
+    },
+    {
+      "source": "KP126",
+      "target": "KP127",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(利率~美联储)"
+    },
+    {
+      "source": "KP127",
+      "target": "KP129",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(美联储~加息)"
+    },
+    {
+      "source": "KP126",
+      "target": "KP128",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(利率→降息)"
+    },
+    {
+      "source": "KP128",
+      "target": "KP127",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(降息~美联储)"
+    },
+    {
+      "source": "KP126",
+      "target": "KP129",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(利率→加息)"
+    },
+    {
+      "source": "KP131",
+      "target": "KP123",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(通货紧缩~CPI)"
+    },
+    {
+      "source": "KP132",
+      "target": "KP133",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(汇率~美元指数)"
+    },
+    {
+      "source": "KP133",
+      "target": "KP127",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(美元指数~美联储)"
+    },
+    {
+      "source": "KP134",
+      "target": "KP135",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(半导体~AI)"
+    },
+    {
+      "source": "KP134",
+      "target": "KP117",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(半导体~成长股)"
+    },
+    {
+      "source": "KP136",
+      "target": "KP117",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(新能源~成长股)"
+    },
+    {
+      "source": "KP137",
+      "target": "KP138",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(医药~消费)"
+    },
+    {
+      "source": "KP139",
+      "target": "KP126",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(银行~利率)"
+    },
+    {
+      "source": "KP140",
+      "target": "KP126",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(地产~利率)"
+    },
+    {
+      "source": "KP144",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(北向资金~A股)"
+    },
+    {
+      "source": "KP144",
+      "target": "KP146",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(北向资金~主力资金)"
+    },
+    {
+      "source": "KP145",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(南向资金~A股)"
+    },
+    {
+      "source": "KP146",
+      "target": "KP147",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(主力资金~游资)"
+    },
+    {
+      "source": "KP147",
+      "target": "KP99",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(游资~打板)"
+    },
+    {
+      "source": "KP148",
+      "target": "KP149",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(社保基金~公募基金)"
+    },
+    {
+      "source": "KP149",
+      "target": "KP150",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(公募基金~私募基金)"
+    },
+    {
+      "source": "KP149",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(公募基金~ETF)"
+    },
+    {
+      "source": "KP151",
+      "target": "KP144",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(QFII~北向资金)"
+    },
+    {
+      "source": "KP152",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(ETF资金流~ETF)"
+    },
+    {
+      "source": "KP152",
+      "target": "KP146",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(ETF资金流~主力资金)"
+    },
+    {
+      "source": "KP153",
+      "target": "KP154",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(K线~均线)"
+    },
+    {
+      "source": "KP153",
+      "target": "KP154",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(K线→均线)"
+    },
+    {
+      "source": "KP154",
+      "target": "KP155",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(均线~MACD)"
+    },
+    {
+      "source": "KP154",
+      "target": "KP158",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(均线~趋势线)"
+    },
+    {
+      "source": "KP154",
+      "target": "KP155",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(均线→MACD)"
+    },
+    {
+      "source": "KP155",
+      "target": "KP156",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(MACD~RSI)"
+    },
+    {
+      "source": "KP157",
+      "target": "KP154",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(布林带~均线)"
+    },
+    {
+      "source": "KP157",
+      "target": "KP22",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(布林带~波动率)"
+    },
+    {
+      "source": "KP158",
+      "target": "KP159",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(趋势线~支撑位)"
+    },
+    {
+      "source": "KP158",
+      "target": "KP160",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(趋势线~压力位)"
+    },
+    {
+      "source": "KP159",
+      "target": "KP160",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(支撑位~压力位)"
+    },
+    {
+      "source": "KP161",
+      "target": "KP20",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(成交量分析~成交量)"
+    },
+    {
+      "source": "KP161",
+      "target": "KP153",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(成交量分析~K线)"
+    },
+    {
+      "source": "KP162",
+      "target": "KP102",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(仓位管理~仓位)"
+    },
+    {
+      "source": "KP162",
+      "target": "KP164",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(仓位管理~VaR)"
+    },
+    {
+      "source": "KP163",
+      "target": "KP162",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(凯利公式~仓位管理)"
+    },
+    {
+      "source": "KP22",
+      "target": "KP164",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(波动率→VaR)"
+    },
+    {
+      "source": "KP164",
+      "target": "KP165",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(VaR~风险预算)"
+    },
+    {
+      "source": "KP165",
+      "target": "KP166",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(风险预算~风险暴露)"
+    },
+    {
+      "source": "KP166",
+      "target": "KP164",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(风险暴露~VaR)"
+    },
+    {
+      "source": "KP167",
+      "target": "KP164",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(压力测试~VaR)"
+    },
+    {
+      "source": "KP168",
+      "target": "KP166",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(对冲~风险暴露)"
+    },
+    {
+      "source": "KP38",
+      "target": "KP169",
+      "type": "dependency",
+      "weight": 0.6,
+      "label": "依赖(非系统性风险→分散投资)"
+    },
+    {
+      "source": "KP169",
+      "target": "KP165",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(分散投资~风险预算)"
+    },
+    {
+      "source": "KP170",
+      "target": "KP171",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(信息披露~内幕交易)"
+    },
+    {
+      "source": "KP170",
+      "target": "KP03",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(信息披露~财报)"
+    },
+    {
+      "source": "KP172",
+      "target": "KP171",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(市场操纵~内幕交易)"
+    },
+    {
+      "source": "KP173",
+      "target": "KP175",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(投资者适当性~KYC)"
+    },
+    {
+      "source": "KP174",
+      "target": "KP175",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(反洗钱~KYC)"
+    },
+    {
+      "source": "KP176",
+      "target": "KP170",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(合规审计~信息披露)"
+    },
+    {
+      "source": "KP177",
+      "target": "KP180",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(投资计划~交易复盘)"
+    },
+    {
+      "source": "KP178",
+      "target": "KP180",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(投资日志~交易复盘)"
+    },
+    {
+      "source": "KP179",
+      "target": "KP177",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(回测~投资计划)"
+    },
+    {
+      "source": "KP181",
+      "target": "KP184",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(行为金融~损失厌恶)"
+    },
+    {
+      "source": "KP181",
+      "target": "KP185",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(行为金融~过度自信)"
+    },
+    {
+      "source": "KP182",
+      "target": "KP181",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(FOMO~行为金融)"
+    },
+    {
+      "source": "KP183",
+      "target": "KP181",
+      "type": "association",
+      "weight": 0.5,
+      "label": "关联(锚定效应~行为金融)"
+    },
+    {
+      "source": "KP01",
+      "target": "KP02",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资分析)"
+    },
+    {
+      "source": "KP02",
+      "target": "KP03",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资分析)"
+    },
+    {
+      "source": "KP04",
+      "target": "KP06",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场主体)"
+    },
+    {
+      "source": "KP05",
+      "target": "KP10",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(组合管理)"
+    },
+    {
+      "source": "KP07",
+      "target": "KP08",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场与品种)"
+    },
+    {
+      "source": "KP08",
+      "target": "KP09",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场与品种)"
+    },
+    {
+      "source": "KP09",
+      "target": "KP11",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场与品种)"
+    },
+    {
+      "source": "KP11",
+      "target": "KP12",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场与品种)"
+    },
+    {
+      "source": "KP14",
+      "target": "KP15",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP15",
+      "target": "KP16",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP16",
+      "target": "KP17",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP17",
+      "target": "KP18",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP18",
+      "target": "KP19",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP21",
+      "target": "KP22",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP22",
+      "target": "KP23",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP23",
+      "target": "KP24",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP26",
+      "target": "KP27",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(市场基础)"
+    },
+    {
+      "source": "KP30",
+      "target": "KP31",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(收益指标)"
+    },
+    {
+      "source": "KP32",
+      "target": "KP33",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(收益指标)"
+    },
+    {
+      "source": "KP34",
+      "target": "KP35",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(收益指标)"
+    },
+    {
+      "source": "KP35",
+      "target": "KP36",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(收益指标)"
+    },
+    {
+      "source": "KP38",
+      "target": "KP39",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(风险)"
+    },
+    {
+      "source": "KP39",
+      "target": "KP40",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(风险)"
+    },
+    {
+      "source": "KP40",
+      "target": "KP41",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(风险)"
+    },
+    {
+      "source": "KP41",
+      "target": "KP42",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(风险)"
+    },
+    {
+      "source": "KP44",
+      "target": "KP45",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(时间价值)"
+    },
+    {
+      "source": "KP47",
+      "target": "KP48",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(时间价值)"
+    },
+    {
+      "source": "KP51",
+      "target": "KP52",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP52",
+      "target": "KP53",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP53",
+      "target": "KP54",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP54",
+      "target": "KP55",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP55",
+      "target": "KP56",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP57",
+      "target": "KP58",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP58",
+      "target": "KP59",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP59",
+      "target": "KP60",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP60",
+      "target": "KP61",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP61",
+      "target": "KP62",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP62",
+      "target": "KP63",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(股票分析)"
+    },
+    {
+      "source": "KP64",
+      "target": "KP65",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(财务报表)"
+    },
+    {
+      "source": "KP65",
+      "target": "KP66",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(财务报表)"
+    },
+    {
+      "source": "KP66",
+      "target": "KP67",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(财务报表)"
+    },
+    {
+      "source": "KP67",
+      "target": "KP68",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(财务报表)"
+    },
+    {
+      "source": "KP68",
+      "target": "KP69",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(财务报表)"
+    },
+    {
+      "source": "KP69",
+      "target": "KP70",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(财务报表)"
+    },
+    {
+      "source": "KP73",
+      "target": "KP74",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资工具)"
+    },
+    {
+      "source": "KP74",
+      "target": "KP75",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资工具)"
+    },
+    {
+      "source": "KP77",
+      "target": "KP78",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资工具)"
+    },
+    {
+      "source": "KP78",
+      "target": "KP79",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资工具)"
+    },
+    {
+      "source": "KP79",
+      "target": "KP80",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资工具)"
+    },
+    {
+      "source": "KP80",
+      "target": "KP81",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资工具)"
+    },
+    {
+      "source": "KP81",
+      "target": "KP82",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资工具)"
+    },
+    {
+      "source": "KP82",
+      "target": "KP83",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资工具)"
+    },
+    {
+      "source": "KP84",
+      "target": "KP85",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP85",
+      "target": "KP86",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP86",
+      "target": "KP87",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP87",
+      "target": "KP88",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP88",
+      "target": "KP89",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP89",
+      "target": "KP90",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP90",
+      "target": "KP91",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP91",
+      "target": "KP92",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP92",
+      "target": "KP93",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP93",
+      "target": "KP94",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(指数)"
+    },
+    {
+      "source": "KP96",
+      "target": "KP97",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP97",
+      "target": "KP98",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP99",
+      "target": "KP100",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP100",
+      "target": "KP101",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP101",
+      "target": "KP102",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP103",
+      "target": "KP104",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP104",
+      "target": "KP105",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP105",
+      "target": "KP106",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP106",
+      "target": "KP107",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP107",
+      "target": "KP108",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP108",
+      "target": "KP109",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(交易)"
+    },
+    {
+      "source": "KP110",
+      "target": "KP111",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(价值投资)"
+    },
+    {
+      "source": "KP111",
+      "target": "KP112",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(价值投资)"
+    },
+    {
+      "source": "KP112",
+      "target": "KP113",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(价值投资)"
+    },
+    {
+      "source": "KP113",
+      "target": "KP114",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(价值投资)"
+    },
+    {
+      "source": "KP115",
+      "target": "KP116",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(价值投资)"
+    },
+    {
+      "source": "KP118",
+      "target": "KP119",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(成长投资)"
+    },
+    {
+      "source": "KP119",
+      "target": "KP120",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(成长投资)"
+    },
+    {
+      "source": "KP124",
+      "target": "KP125",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(宏观投资)"
+    },
+    {
+      "source": "KP125",
+      "target": "KP126",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(宏观投资)"
+    },
+    {
+      "source": "KP128",
+      "target": "KP129",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(宏观投资)"
+    },
+    {
+      "source": "KP129",
+      "target": "KP130",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(宏观投资)"
+    },
+    {
+      "source": "KP130",
+      "target": "KP131",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(宏观投资)"
+    },
+    {
+      "source": "KP131",
+      "target": "KP132",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(宏观投资)"
+    },
+    {
+      "source": "KP135",
+      "target": "KP136",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(行业分析)"
+    },
+    {
+      "source": "KP136",
+      "target": "KP137",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(行业分析)"
+    },
+    {
+      "source": "KP138",
+      "target": "KP139",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(行业分析)"
+    },
+    {
+      "source": "KP139",
+      "target": "KP140",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(行业分析)"
+    },
+    {
+      "source": "KP140",
+      "target": "KP141",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(行业分析)"
+    },
+    {
+      "source": "KP141",
+      "target": "KP142",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(行业分析)"
+    },
+    {
+      "source": "KP142",
+      "target": "KP143",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(行业分析)"
+    },
+    {
+      "source": "KP144",
+      "target": "KP145",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(资金分析)"
+    },
+    {
+      "source": "KP145",
+      "target": "KP146",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(资金分析)"
+    },
+    {
+      "source": "KP147",
+      "target": "KP148",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(资金分析)"
+    },
+    {
+      "source": "KP150",
+      "target": "KP151",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(资金分析)"
+    },
+    {
+      "source": "KP151",
+      "target": "KP152",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(资金分析)"
+    },
+    {
+      "source": "KP156",
+      "target": "KP157",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(技术分析)"
+    },
+    {
+      "source": "KP157",
+      "target": "KP158",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(技术分析)"
+    },
+    {
+      "source": "KP160",
+      "target": "KP161",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(技术分析)"
+    },
+    {
+      "source": "KP163",
+      "target": "KP164",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(风险管理)"
+    },
+    {
+      "source": "KP166",
+      "target": "KP167",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(风险管理)"
+    },
+    {
+      "source": "KP167",
+      "target": "KP168",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(风险管理)"
+    },
+    {
+      "source": "KP168",
+      "target": "KP169",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(风险管理)"
+    },
+    {
+      "source": "KP172",
+      "target": "KP173",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(合规)"
+    },
+    {
+      "source": "KP173",
+      "target": "KP174",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(合规)"
+    },
+    {
+      "source": "KP175",
+      "target": "KP176",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(合规)"
+    },
+    {
+      "source": "KP177",
+      "target": "KP178",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资纪律)"
+    },
+    {
+      "source": "KP178",
+      "target": "KP179",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资纪律)"
+    },
+    {
+      "source": "KP179",
+      "target": "KP180",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资纪律)"
+    },
+    {
+      "source": "KP180",
+      "target": "KP181",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资纪律)"
+    },
+    {
+      "source": "KP182",
+      "target": "KP183",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资纪律)"
+    },
+    {
+      "source": "KP183",
+      "target": "KP184",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资纪律)"
+    },
+    {
+      "source": "KP184",
+      "target": "KP185",
+      "type": "association",
+      "weight": 0.35,
+      "label": "同域(投资纪律)"
+    }
+  ],
+  "matrix": {
+    "dimensions": [
+      "知识层级",
+      "业务场景"
+    ],
+    "scenarios": [
+      "选股分析",
+      "资产配置",
+      "现金管理",
+      "打新",
+      "宏观研究",
+      "交易执行",
+      "风险管理",
+      "行业研究"
+    ],
+    "cells": {
+      "L1": {
+        "选股分析": [
+          "回撤",
+          "前复权",
+          "一级市场",
+          "二级市场",
+          "市值",
+          "流动性",
+          "成交量",
+          "换手率",
+          "杠杆",
+          "做多",
+          "做空",
+          "保证金",
+          "收益率",
+          "年化收益率",
+          "CAGR",
+          "Alpha",
+          "Beta",
+          "夏普比率",
+          "索提诺比率",
+          "信息比率",
+          "Calmar比率",
+          "复利",
+          "单利",
+          "折现",
+          "现值",
+          "终值",
+          "内部收益率",
+          "净现值"
+        ],
+        "资产配置": [
+          "回撤",
+          "一级市场",
+          "二级市场",
+          "牛市",
+          "熊市",
+          "市值",
+          "流动性",
+          "成交量",
+          "换手率",
+          "杠杆",
+          "做多",
+          "做空",
+          "保证金",
+          "收益率",
+          "年化收益率",
+          "CAGR",
+          "Alpha",
+          "Beta",
+          "夏普比率",
+          "索提诺比率",
+          "信息比率",
+          "Calmar比率"
+        ],
+        "现金管理": [],
+        "打新": [],
+        "宏观研究": [],
+        "交易执行": [
+          "牛市",
+          "熊市",
+          "震荡市",
+          "熔断"
+        ],
+        "风险管理": [
+          "波动率",
+          "系统性风险",
+          "非系统性风险",
+          "黑天鹅",
+          "灰犀牛",
+          "尾部风险",
+          "风险溢价"
+        ],
+        "行业研究": []
+      },
+      "L2": {
+        "选股分析": [
+          "财报",
+          "持仓",
+          "市盈率",
+          "市净率",
+          "市销率",
+          "PEG",
+          "EV/EBITDA",
+          "股息率",
+          "ROE",
+          "ROA",
+          "毛利率",
+          "净利率",
+          "自由现金流",
+          "经营现金流",
+          "EPS",
+          "每股净资产",
+          "资产负债表",
+          "利润表",
+          "现金流量表",
+          "商誉",
+          "存货",
+          "应收账款",
+          "固定资产",
+          "折旧",
+          "摊销"
+        ],
+        "资产配置": [
+          "持仓",
+          "ETF",
+          "LOF",
+          "REITs",
+          "可转债",
+          "债券",
+          "公司债",
+          "国债",
+          "可交换债",
+          "货币基金",
+          "指数基金",
+          "QDII",
+          "FOF",
+          "上证指数",
+          "深证成指",
+          "创业板指",
+          "科创50",
+          "沪深300",
+          "中证500",
+          "中证1000",
+          "纳斯达克100",
+          "标普500",
+          "道琼斯指数",
+          "恒生指数"
+        ],
+        "现金管理": [
+          "国债逆回购",
+          "新债"
+        ],
+        "打新": [
+          "新股",
+          "新债"
+        ],
+        "宏观研究": [],
+        "交易执行": [
+          "涨停",
+          "跌停",
+          "集合竞价",
+          "连板",
+          "打板",
+          "止盈",
+          "止损",
+          "仓位",
+          "满仓",
+          "空仓",
+          "加仓",
+          "减仓",
+          "网格交易",
+          "定投",
+          "再平衡"
+        ],
+        "风险管理": [
+          "止盈",
+          "止损"
+        ],
+        "行业研究": []
+      },
+      "L3": {
+        "选股分析": [
+          "高盛",
+          "巴菲特",
+          "内在价值",
+          "护城河",
+          "DCF估值",
+          "芒格",
+          "格雷厄姆",
+          "安全边际",
+          "能力圈",
+          "成长股",
+          "龙头股",
+          "景气周期",
+          "TAM",
+          "渗透率",
+          "北向资金",
+          "南向资金",
+          "主力资金",
+          "游资",
+          "社保基金",
+          "公募基金",
+          "私募基金",
+          "QFII",
+          "ETF资金流"
+        ],
+        "资产配置": [
+          "高盛",
+          "巴菲特",
+          "美股",
+          "A股"
+        ],
+        "现金管理": [],
+        "打新": [
+          "美股",
+          "A股"
+        ],
+        "宏观研究": [
+          "GDP",
+          "CPI",
+          "PPI",
+          "PMI",
+          "利率",
+          "美联储",
+          "降息",
+          "加息",
+          "通货膨胀",
+          "通货紧缩",
+          "汇率",
+          "美元指数"
+        ],
+        "交易执行": [
+          "K线",
+          "均线",
+          "MACD",
+          "RSI",
+          "布林带",
+          "趋势线",
+          "支撑位",
+          "压力位",
+          "成交量分析"
+        ],
+        "风险管理": [],
+        "行业研究": [
+          "半导体",
+          "AI",
+          "新能源",
+          "医药",
+          "消费",
+          "银行",
+          "地产",
+          "军工",
+          "有色",
+          "煤炭"
+        ]
+      },
+      "L4": {
+        "选股分析": [],
+        "资产配置": [],
+        "现金管理": [],
+        "打新": [],
+        "宏观研究": [],
+        "交易执行": [],
+        "风险管理": [
+          "仓位管理",
+          "凯利公式",
+          "VaR",
+          "风险预算",
+          "风险暴露",
+          "压力测试",
+          "对冲",
+          "分散投资",
+          "信息披露",
+          "内幕交易",
+          "市场操纵",
+          "投资者适当性",
+          "反洗钱",
+          "KYC",
+          "合规审计",
+          "投资计划",
+          "投资日志",
+          "回测",
+          "交易复盘",
+          "行为金融",
+          "FOMO",
+          "锚定效应",
+          "损失厌恶",
+          "过度自信"
+        ],
+        "行业研究": []
+      }
+    },
+    "blind_spots": [
+      "基础理论层 × 现金管理（无对应知识点）",
+      "基础理论层 × 打新（无对应知识点）",
+      "基础理论层 × 宏观研究（无对应知识点）",
+      "基础理论层 × 行业研究（无对应知识点）",
+      "核心业务能力层 × 宏观研究（无对应知识点）",
+      "核心业务能力层 × 行业研究（无对应知识点）",
+      "扩展应用层 × 现金管理（无对应知识点）",
+      "扩展应用层 × 风险管理（无对应知识点）",
+      "治理管控层 × 选股分析（无对应知识点）",
+      "治理管控层 × 资产配置（无对应知识点）",
+      "治理管控层 × 现金管理（无对应知识点）",
+      "治理管控层 × 打新（无对应知识点）",
+      "治理管控层 × 宏观研究（无对应知识点）",
+      "治理管控层 × 交易执行（无对应知识点）",
+      "治理管控层 × 行业研究（无对应知识点）"
+    ]
+  },
+  "learning_paths": [
+    {
+      "stage": "入门",
+      "nodes": [
+        "回撤",
+        "前复权",
+        "一级市场",
+        "二级市场",
+        "牛市",
+        "熊市",
+        "震荡市",
+        "市值"
+      ]
+    },
+    {
+      "stage": "基础",
+      "nodes": [
+        "财报",
+        "持仓",
+        "ETF",
+        "国债逆回购",
+        "新股",
+        "新债",
+        "市盈率",
+        "市净率",
+        "市销率",
+        "PEG"
+      ]
+    },
+    {
+      "stage": "进阶",
+      "nodes": [
+        "高盛",
+        "巴菲特",
+        "美股",
+        "A股",
+        "内在价值",
+        "护城河",
+        "DCF估值",
+        "芒格",
+        "格雷厄姆",
+        "安全边际"
+      ]
+    },
+    {
+      "stage": "高级",
+      "nodes": [
+        "仓位管理",
+        "凯利公式",
+        "VaR",
+        "风险预算",
+        "风险暴露",
+        "压力测试",
+        "对冲",
+        "分散投资",
+        "信息披露",
+        "内幕交易"
+      ]
+    }
+  ]
+}

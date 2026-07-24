@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金融投资 · 名词含义与关系图谱</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --bg:#f5f7fb; --panel:#fff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --accent:#2563eb;
+         --L1:#2563eb; --L2:#059669; --L3:#d97706; --L4:#dc2626; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+  header { background:linear-gradient(120deg,#1e3a8a,#2563eb); color:#fff; padding:18px 26px; }
+  header h1 { font-size:20px; font-weight:700; }
+  header p { font-size:13px; opacity:.85; margin-top:4px; }
+  .stat { display:inline-block; background:rgba(255,255,255,.15); border-radius:8px; padding:3px 10px; margin:6px 8px 0 0; font-size:12px; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px 22px; background:var(--panel); border-bottom:1px solid var(--line); }
+  .toolbar input { padding:7px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; width:240px; }
+  .toolbar .layers { display:flex; gap:6px; }
+  .lbtn { cursor:pointer; border:1px solid var(--line); background:#fff; padding:5px 11px; border-radius:20px; font-size:12px; color:var(--muted); user-select:none; }
+  .lbtn.on { color:#fff; border-color:transparent; }
+  .lbtn[data-l="L1"].on{background:var(--L1);} .lbtn[data-l="L2"].on{background:var(--L2);}
+  .lbtn[data-l="L3"].on{background:var(--L3);} .lbtn[data-l="L4"].on{background:var(--L4);}
+  .reset { margin-left:auto; cursor:pointer; color:var(--accent); font-size:13px; border:none; background:none; }
+  .main { display:flex; gap:0; height:calc(100vh - 175px); }
+  .graph-wrap { flex:1 1 auto; position:relative; overflow:hidden; }
+  #graph { width:100%; height:100%; display:block; background:radial-gradient(circle at 50% 40%, #fbfdff, #eef2f9); }
+  .side { flex:0 0 340px; border-left:1px solid var(--line); background:var(--panel); overflow-y:auto; padding:18px; }
+  .side h2 { font-size:14px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; margin-bottom:10px; }
+  .detail-empty { color:var(--muted); font-size:13px; }
+  .badge { display:inline-block; font-size:11px; color:#fff; padding:2px 8px; border-radius:10px; margin-right:6px; }
+  .b-L1{background:var(--L1);} .b-L2{background:var(--L2);} .b-L3{background:var(--L3);} .b-L4{background:var(--L4);}
+  .def { font-size:14px; margin:10px 0; padding:12px; background:#f8fafc; border-left:3px solid var(--accent); border-radius:6px; }
+  .meta-row { font-size:13px; margin:7px 0; }
+  .meta-row b { color:var(--muted); font-weight:600; margin-right:6px; }
+  .chips { display:flex; flex-wrap:wrap; gap:5px; margin-top:4px; }
+  .chip { font-size:12px; background:#eef2ff; color:#3730a3; padding:3px 9px; border-radius:12px; cursor:pointer; }
+  .chip:hover { background:#dbeafe; }
+  .cards { border-top:1px solid var(--line); }
+  .cards h2 { font-size:14px; color:var(--muted); padding:14px 22px 0; }
+  .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:11px; padding:14px 22px 30px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:12px 13px; cursor:pointer; transition:.15s; border-top:3px solid var(--accent); }
+  .card:hover { box-shadow:0 4px 14px rgba(0,0,0,.08); transform:translateY(-2px); }
+  .card .cname { font-weight:700; font-size:14px; display:flex; align-items:center; gap:7px; }
+  .card .cdot { width:10px; height:10px; border-radius:50%; }
+  .card .cdef { font-size:12px; color:var(--muted); margin-top:6px; }
+  .card .ctag { font-size:11px; color:var(--muted); margin-top:7px; }
+  .legend { position:absolute; left:14px; bottom:14px; background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:10px; padding:10px 12px; font-size:12px; color:var(--muted); max-height:46%; overflow:auto; }
+  .legend .row { display:flex; align-items:center; gap:7px; margin:3px 0; }
+  .legend .sw { width:14px; height:4px; border-radius:2px; }
+  .legend .nd { width:11px; height:11px; border-radius:50%; }
+  .node-label { font-size:11.5px; fill:#1f2937; pointer-events:none; font-weight:600; }
+  .hint { position:absolute; right:14px; top:12px; font-size:12px; color:var(--muted); background:rgba(255,255,255,.9); padding:6px 10px; border-radius:8px; border:1px solid var(--line); }
+  #loader { position:fixed; inset:0; background:rgba(245,247,251,.97); display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:99; text-align:center; padding:30px; }
+  #loader .box { background:#fff; border:1px solid var(--line); border-radius:14px; padding:28px 34px; max-width:540px; box-shadow:0 10px 40px rgba(0,0,0,.12); }
+  #loader h3 { font-size:17px; margin-bottom:10px; }
+  #loader p { font-size:13px; color:var(--muted); margin-bottom:16px; }
+  #loader input[type=file] { font-size:13px; }
+  #loader .path { margin-top:12px; font-size:12px; color:var(--muted); font-family:monospace; word-break:break-all; }
+</style>
+</head>
+<body>
+<header>
+  <h1>金融投资 · 名词含义与关系图谱</h1>
+  <p>点击节点查看定义与关系 · 拖拽调整布局 · 按层级筛选与搜索</p>
+  <div id="statbar"></div>
+</header>
+<div class="toolbar">
+  <input id="search" placeholder="搜索名词，如：夏普比率 / 护城河 / VaR">
+  <div class="layers" id="layerBtns">
+    <span class="lbtn on" data-l="L1">基础理论层</span>
+    <span class="lbtn on" data-l="L2">核心业务能力层</span>
+    <span class="lbtn on" data-l="L3">扩展应用层</span>
+    <span class="lbtn on" data-l="L4">治理管控层</span>
+  </div>
+  <button class="reset" id="resetBtn">重置视图</button>
+</div>
+<div class="main">
+  <div class="graph-wrap">
+    <svg id="graph" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="hint">拖动节点调整布局 · 点击节点看详情</div>
+    <div class="legend" id="legend"></div>
+  </div>
+  <div class="side">
+    <h2>名词详情</h2>
+    <div id="detail"><p class="detail-empty">在左侧图谱中点击一个名词，或点击下方卡片，这里会显示它的完整定义、前置依赖、关联术语与应用场景。</p></div>
+  </div>
+</div>
+<div class="cards">
+  <h2>全部名词卡片（按知识层分组）</h2>
+  <div class="card-grid" id="cardGrid"></div>
+</div>
+<script>
+// ============ 数据源：引用同目录下的 JSON 文件 ============
+const JSON_PATH = './金融投资知识体系.json';
+
+// 数据加载完成后调用此函数初始化整个可视化
+function init(DATA){
+  const SVGNS='http://www.w3.org/2000/svg';
+  const svg=document.getElementById('graph');
+  const W=1500,H=1050;
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  const LAYER_COLORS={L1:'#2563eb',L2:'#059669',L3:'#d97706',L4:'#dc2626'};
+  const LAYER_NAMES={L1:'基础理论层',L2:'核心业务能力层',L3:'扩展应用层',L4:'治理管控层'};
+  const EDGE_STYLE={dependency:{color:'#ef4444',dash:'',arrow:true,label:'依赖'},association:{color:'#94a3b8',dash:'5,5',arrow:false,label:'关联'},composition:{color:'#10b981',dash:'',arrow:true,label:'组成'},subordination:{color:'#3b82f6',dash:'',arrow:true,label:'从属'},evolution:{color:'#8b5cf6',dash:'5,5',arrow:true,label:'演化'}};
+  function estyle(t){return EDGE_STYLE[t]||{color:'#9ca3af',dash:'4,4',arrow:false,label:t}; }
+
+  const nodes=DATA.nodes.map((n,i)=>({...n,x:W/2+(Math.random()-0.5)*520,y:H/2+(Math.random()-0.5)*420,vx:0,vy:0,fixed:false}));
+  const idx={}; nodes.forEach((n,i)=>idx[n.id]=i);
+  const links=DATA.edges.map(e=>({...e,s:idx[e.source],t:idx[e.target]}));
+  nodes.forEach(n=>{ const d=(n.related||[]).length+(n.prerequisites||[]).length; n.r=14+Math.min(d,10)*1.7; });
+
+  const defs=document.createElementNS(SVGNS,'defs'); svg.appendChild(defs);
+  Object.keys(EDGE_STYLE).forEach(t=>{ const st=EDGE_STYLE[t]; if(!st.arrow) return;
+    const m=document.createElementNS(SVGNS,'marker'); m.setAttribute('id','arrow-'+t);
+    m.setAttribute('viewBox','0 0 10 10'); m.setAttribute('refX','9'); m.setAttribute('refY','5');
+    m.setAttribute('markerWidth','7'); m.setAttribute('markerHeight','7'); m.setAttribute('orient','auto-start-reverse');
+    const p=document.createElementNS(SVGNS,'path'); p.setAttribute('d','M0,0 L10,5 L0,10 z'); p.setAttribute('fill',st.color);
+    m.appendChild(p); defs.appendChild(m); });
+
+  const gLinks=document.createElementNS(SVGNS,'g'); svg.appendChild(gLinks);
+  const gNodes=document.createElementNS(SVGNS,'g'); svg.appendChild(gNodes);
+  const linkEls=links.map(l=>{ const st=estyle(l.type); const ln=document.createElementNS(SVGNS,'line');
+    ln.setAttribute('class','link'); ln.setAttribute('stroke',st.color); if(st.dash) ln.setAttribute('stroke-dasharray',st.dash);
+    if(st.arrow) ln.setAttribute('marker-end','url(#arrow-'+l.type+')'); ln.setAttribute('stroke-width','1.4'); gLinks.appendChild(ln); return ln; });
+  const nodeEls=nodes.map((n,i)=>{ const g=document.createElementNS(SVGNS,'g');
+    const c=document.createElementNS(SVGNS,'circle'); c.setAttribute('r',n.r); c.setAttribute('fill',LAYER_COLORS[n.layer]||'#64748b');
+    c.setAttribute('stroke','#fff'); c.setAttribute('stroke-width','2');
+    const t=document.createElementNS(SVGNS,'text'); t.setAttribute('class','node-label'); t.setAttribute('text-anchor','middle');
+    t.setAttribute('dy',n.r+13); t.textContent=n.name; g.appendChild(c); g.appendChild(t); gNodes.appendChild(g); return g; });
+
+  let alpha=1,running=false;
+  const repK=3000,springK=0.03,restLen=130,grav=0.012,damping=0.88;
+  function tick(){
+    for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){ const a=nodes[i],b=nodes[j];
+      let dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy||0.01,d=Math.sqrt(d2),f=repK/d2,fx=dx/d*f,fy=dy/d*f;
+      a.vx+=fx;a.vy+=fy;b.vx-=fx;b.vy-=fy; }
+    links.forEach(l=>{ const a=nodes[l.s],b=nodes[l.t]; let dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||0.01;
+      let f=(d-restLen)*springK,fx=dx/d*f,fy=dy/d*f; a.vx+=fx;a.vy+=fy;b.vx-=fx;b.vy-=fy; });
+    nodes.forEach(n=>{ if(n.fixed){n.vx=0;n.vy=0;return;} n.vx+=(W/2-n.x)*grav; n.vy+=(H/2-n.y)*grav;
+      n.vx*=damping;n.vy*=damping; n.x+=n.vx*alpha;n.y+=n.vy*alpha;
+      n.x=Math.max(n.r,Math.min(W-n.r,n.x)); n.y=Math.max(n.r,Math.min(H-n.r,n.y)); });
+    alpha*=0.99; if(alpha<0.02) alpha=0.02; draw();
+    if(alpha>0.022||dragNode) requestAnimationFrame(tick); else running=false;
+  }
+  function restart(){ alpha=0.85; if(!running){running=true; requestAnimationFrame(tick);} }
+  function draw(){ links.forEach((l,i)=>{ const a=nodes[l.s],b=nodes[l.t];
+    linkEls[i].setAttribute('x1',a.x);linkEls[i].setAttribute('y1',a.y);linkEls[i].setAttribute('x2',b.x);linkEls[i].setAttribute('y2',b.y); });
+    nodes.forEach((n,i)=>{ nodeEls[i].setAttribute('transform','translate('+n.x+','+n.y+')'); }); }
+
+  let selectedId=null,activeLayers=new Set(['L1','L2','L3','L4']),query='';
+  function neighborsOf(id){ const s=new Set(); links.forEach(l=>{ if(nodes[l.s].id===id)s.add(nodes[l.t].id); if(nodes[l.t].id===id)s.add(nodes[l.s].id); }); return s; }
+  function matchesQuery(n){ if(!query) return true; return n.name.includes(query)||(n.definition||'').includes(query); }
+  function render(){
+    const nb=selectedId?neighborsOf(selectedId):null;
+    nodes.forEach((n,i)=>{ let op=1; const inL=activeLayers.has(n.layer),inS=matchesQuery(n);
+      if(!inL||!inS) op=0.07; else if(selectedId) op=(n.id===selectedId||nb.has(n.id))?1:0.12;
+      nodeEls[i].style.opacity=op; });
+    links.forEach((l,i)=>{ const a=nodes[l.s],b=nodes[l.t];
+      const vis=activeLayers.has(a.layer)&&activeLayers.has(b.layer)&&matchesQuery(a)&&matchesQuery(b);
+      let op=vis?0.45:0.035; if(selectedId){ const hit=(a.id===selectedId&&nb.has(b.id))||(b.id===selectedId&&nb.has(a.id)); op=hit?1:(vis?0.05:0.02); }
+      linkEls[i].style.opacity=op; linkEls[i].setAttribute('stroke-width',(selectedId&&op>0.5)?'2.4':'1.4'); });
+    nodes.forEach((n,i)=>{ const c=nodeEls[i].querySelector('circle');
+      if(selectedId&&n.id===selectedId){c.setAttribute('stroke','#111827');c.setAttribute('stroke-width','3.5');} else {c.setAttribute('stroke','#fff');c.setAttribute('stroke-width','2');} });
+  }
+  function showDetail(id){ const n=nodes[idx[id]]; if(!n) return;
+    const rel=(n.related||[]).map(r=>'<span class="chip" data-name="'+r+'">'+r+'</span>').join('');
+    const pre=(n.prerequisites||[]).map(r=>'<span class="chip" data-name="'+r+'">'+r+'</span>').join('')||'<span style="color:var(--muted);font-size:13px;">无</span>';
+    const sc=(n.scenarios||[]).map(s=>'<span class="chip">'+s+'</span>').join('')||'<span style="color:var(--muted);font-size:13px;">—</span>';
+    document.getElementById('detail').innerHTML=
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;"><span style="width:14px;height:14px;border-radius:50%;background:'+(LAYER_COLORS[n.layer]||'#64748b')+'"></span><span style="font-size:19px;font-weight:700;">'+n.name+'</span></div>'
+      +'<span class="badge b-'+n.layer+'">'+LAYER_NAMES[n.layer]+'</span><span class="badge" style="background:#64748b;">'+n.domain+'</span>'
+      +'<div class="def">'+n.definition+'</div>'
+      +'<div class="meta-row"><b>学习难度</b>'+n.difficulty+'</div>'
+      +'<div class="meta-row"><b>置信度</b>'+(n.confidence!=null?(n.confidence*100).toFixed(0)+'%':'—')+'</div>'
+      +'<div class="meta-row"><b>前置依赖</b><div class="chips">'+pre+'</div></div>'
+      +'<div class="meta-row"><b>关联术语</b><div class="chips">'+rel+'</div></div>'
+      +'<div class="meta-row"><b>应用场景</b><div class="chips">'+sc+'</div></div>';
+    document.querySelectorAll('#detail .chip[data-name]').forEach(ch=>{ ch.onclick=()=>{ const t=ch.getAttribute('data-name'); const tn=nodes.find(x=>x.name===t); if(tn) selectNode(tn.id); }; });
+  }
+  function selectNode(id){ selectedId=id; showDetail(id); render();
+    document.querySelectorAll('.card').forEach(c=>{ c.style.outline=(c.getAttribute('data-id')===id)?'2px solid var(--accent)':'none'; }); }
+
+  const grid=document.getElementById('cardGrid');
+  ['L1','L2','L3','L4'].forEach(L=>{ const grp=nodes.filter(n=>n.layer===L); if(!grp.length) return;
+    const head=document.createElement('div'); head.style.cssText='grid-column:1/-1;font-size:12px;font-weight:700;color:'+LAYER_COLORS[L]+';margin-top:6px;letter-spacing:.04em;';
+    head.textContent=LAYER_NAMES[L]+'（'+grp.length+'）'; grid.appendChild(head);
+    grp.forEach(n=>{ const card=document.createElement('div'); card.className='card'; card.setAttribute('data-id',n.id); card.style.borderTopColor=LAYER_COLORS[L];
+      card.innerHTML='<div class="cname"><span class="cdot" style="background:'+LAYER_COLORS[L]+'"></span>'+n.name+'</div><div class="cdef">'+n.definition+'</div><div class="ctag">'+n.domain+' · 难度：'+n.difficulty+'</div>';
+      card.onclick=()=>selectNode(n.id); grid.appendChild(card); }); });
+
+  const legend=document.getElementById('legend');
+  let lg='<div style="font-weight:700;margin-bottom:5px;">图例</div>';
+  ['L1','L2','L3','L4'].forEach(L=>{ lg+='<div class="row"><span class="nd" style="background:'+LAYER_COLORS[L]+'"></span>'+LAYER_NAMES[L]+'</div>'; });
+  Object.keys(EDGE_STYLE).forEach(t=>{ const st=EDGE_STYLE[t]; lg+='<div class="row"><span class="sw" style="background:'+st.color+';'+(st.dash?'border-top:2px dashed '+st.color+';background:none;':'')+'"></span>'+st.label+(st.arrow?'（有向）':'（无向）')+'</div>'; });
+  legend.innerHTML=lg;
+
+  document.getElementById('statbar').innerHTML='<span class="stat">名词总数 '+nodes.length+'</span><span class="stat">关系边 '+links.length+'</span><span class="stat">名词卡片 '+document.querySelectorAll('.card').length+'</span>';
+  document.getElementById('search').addEventListener('input',e=>{ query=e.target.value.trim(); render(); });
+  document.querySelectorAll('.lbtn').forEach(b=>{ b.onclick=()=>{ const L=b.getAttribute('data-l');
+    if(activeLayers.has(L)){activeLayers.delete(L);b.classList.remove('on');} else {activeLayers.add(L);b.classList.add('on');} render(); }; });
+  document.getElementById('resetBtn').onclick=()=>{ selectedId=null;query='';document.getElementById('search').value='';
+    activeLayers=new Set(['L1','L2','L3','L4']); document.querySelectorAll('.lbtn').forEach(b=>b.classList.add('on'));
+    document.getElementById('detail').innerHTML='<p class="detail-empty">在左侧图谱中点击一个名词，或点击下方卡片，这里会显示它的完整定义、前置依赖、关联术语与应用场景。</p>';
+    document.querySelectorAll('.card').forEach(c=>c.style.outline='none'); render(); };
+
+  let dragNode=null,dragMoved=false,downX=0,downY=0;
+  function toSVG(evt){ const pt=svg.createSVGPoint(); pt.x=evt.clientX; pt.y=evt.clientY; return pt.matrixTransform(svg.getScreenCTM().inverse()); }
+  nodeEls.forEach((g,i)=>{ g.addEventListener('pointerdown',e=>{ dragNode=nodes[i];dragMoved=false;dragNode.fixed=true; const p=toSVG(e);downX=p.x;downY=p.y;g.setPointerCapture(e.pointerId); });
+    g.addEventListener('pointermove',e=>{ if(dragNode!==nodes[i])return; const p=toSVG(e); if(Math.abs(p.x-downX)>3||Math.abs(p.y-downY)>3)dragMoved=true; dragNode.x=p.x;dragNode.y=p.y; if(!running){running=true;requestAnimationFrame(tick);} });
+    g.addEventListener('pointerup',e=>{ if(dragNode!==nodes[i])return; dragNode.fixed=false; if(!dragMoved)selectNode(dragNode.id); dragNode=null; }); });
+  restart(); render();
+}
+
+// ============ 加载器：优先 fetch，失败则弹出文件选择兜底 ============
+function showPicker(msg){
+  let el=document.getElementById('loader');
+  if(!el){
+    el=document.createElement('div'); el.id='loader';
+    el.innerHTML='<div class="box"><h3>需要加载知识库 JSON</h3><p id="loaderMsg"></p>'
+      +'<input type="file" id="loaderFile" accept=".json,application/json">'
+      +'<div class="path">目标文件：'+JSON_PATH+'</div></div>';
+    document.body.appendChild(el);
+    document.getElementById('loaderFile').addEventListener('change',e=>{
+      const f=e.target.files[0]; if(!f) return;
+      const rd=new FileReader();
+      rd.onload=()=>{ try{ const DATA=JSON.parse(rd.result); el.remove(); init(DATA); }
+        catch(err){ alert('JSON 解析失败：'+err.message); } };
+      rd.readAsText(f,'utf-8');
+    });
+  }
+  document.getElementById('loaderMsg').textContent=msg;
+}
+function boot(){
+  if(location.protocol==='file:'){
+    showPicker('检测到以本地文件方式打开，浏览器会禁止网页直接读取 JSON。请选择同目录下的「金融投资知识体系.json」（之后只需替换该 JSON 文件，无需重新生成网页）。');
+  } else {
+    fetch(JSON_PATH,{cache:'no-store'}).then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); })
+      .then(DATA=>init(DATA))
+      .catch(err=>{ showPicker('自动加载失败（'+err.message+'），请手动选择 JSON 文件。'); });
+  }
+}
+boot();
+</script>
+</body>
+</html>
