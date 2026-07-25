@@ -1,58 +1,13 @@
-"""
-演示：用多行业股票日线数据，证明尾部风险（肥尾）存在。
-
-运行:
-    uv run python -m finance_lab.tail_risk_demo
-"""
+"""尾部风险证据页的 HTML 渲染。"""
 
 from __future__ import annotations
 
-import argparse
 import json
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
-from finance_lab.compare_sectors import SECTOR_SAMPLES
-from finance_lab.knowledge import find_term
-from finance_lab.market_data import fetch_a_share_daily
-from finance_lab.paths import PROJECT_ROOT
-from finance_lab.tail_risk import analyze_tail_risk, evidence_to_row
-
-OUTPUT_DIR = PROJECT_ROOT / "finance_lab" / "output"
-
-
-def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(description="尾部风险数据证明")
-    p.add_argument("--start", default="20240101")
-    p.add_argument("--end", default="20260724")
-    return p
-
-
-def print_table(df: pd.DataFrame) -> None:
-    show = df.copy()
-    show["偏度"] = show["偏度"].map(lambda x: f"{x:+.3f}")
-    show["超额峰度"] = show["超额峰度"].map(lambda x: f"{x:+.2f}")
-    show["正态期望|Z|≥3"] = show["正态期望|Z|≥3"].map(lambda x: f"{x:.2f}")
-    show["实际/期望(3σ)"] = show["实际/期望(3σ)"].map(lambda x: f"{x:.1f}x")
-    show["正态期望|Z|≥5"] = show["正态期望|Z|≥5"].map(lambda x: f"{x:.3f}")
-    show["日VaR95%"] = show["日VaR95%"].map(lambda x: f"{x:.2%}")
-    show["最大回撤"] = show["最大回撤"].map(lambda x: f"{x:.1%}")
-    cols = [
-        "名称",
-        "行业",
-        "超额峰度",
-        "偏度",
-        "实际|Z|≥3",
-        "正态期望|Z|≥3",
-        "实际/期望(3σ)",
-        "实际|Z|≥5",
-        "日VaR95%",
-        "最大回撤",
-        "肥尾?",
-    ]
-    print(show[cols].to_string(index=False))
+from finance_lab.core.knowledge import find_term
 
 
 def render_html(
@@ -247,84 +202,3 @@ new Chart(document.getElementById('histChart'), {{
 """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html, encoding="utf-8")
-
-
-def make_hist_payload(rets: pd.Series, name: str) -> dict:
-    """单只股票：实际直方图 vs 同均值方差正态的期望频数。"""
-    arr = rets.to_numpy(dtype=float)
-    mu, sigma = float(arr.mean()), float(arr.std(ddof=1))
-    bins = 41
-    counts, edges = np.histogram(arr, bins=bins)
-    centers = 0.5 * (edges[:-1] + edges[1:])
-    # 正态密度 × 样本数 × bin宽度
-    width = float(edges[1] - edges[0])
-    from math import exp, pi, sqrt
-
-    normal = [
-        len(arr)
-        * width
-        * (1.0 / (sigma * sqrt(2 * pi)))
-        * exp(-0.5 * ((c - mu) / sigma) ** 2)
-        for c in centers
-    ]
-    return {
-        "title": name,
-        "bins": [f"{c:.2%}" for c in centers],
-        "actual": [int(x) for x in counts],
-        "normal": [round(float(x), 2) for x in normal],
-    }
-
-
-def main() -> None:
-    args = build_parser().parse_args()
-
-    print(find_term("尾部风险").summary())
-    print()
-    print(f"区间 {args.start} → {args.end}")
-    print("检验：超额峰度、3σ/5σ 极端日相对正态的倍数、VaR 与最大回撤\n")
-
-    rows = []
-    hist_payload = None
-    for item in SECTOR_SAMPLES:
-        df = fetch_a_share_daily(item["symbol"], args.start, args.end)
-        evidence, rets = analyze_tail_risk(df["close"], item["name"], item["symbol"])
-        row = evidence_to_row(evidence)
-        row["行业"] = item["sector"]
-        rows.append(row)
-        print(
-            f"  {item['sector']:4} {item['name']}: "
-            f"超额峰度={evidence.excess_kurtosis:+.2f}, "
-            f"3σ实际/期望="
-            f"{evidence.days_beyond_3sigma / max(evidence.expected_3sigma_normal, 1e-9):.1f}x, "
-            f"5σ天数={evidence.days_beyond_5sigma}, "
-            f"最大回撤={evidence.max_drawdown:.1%}"
-        )
-        # 直方图用宁德或峰度最高者，先暂存茅台，后面改用峰度最高
-        if hist_payload is None or evidence.excess_kurtosis > hist_payload.get("_kurt", -1e9):
-            hist_payload = make_hist_payload(rets, item["name"])
-            hist_payload["_kurt"] = evidence.excess_kurtosis
-
-    assert hist_payload is not None
-    hist_payload.pop("_kurt", None)
-
-    table = pd.DataFrame(rows).sort_values("超额峰度", ascending=False)
-    print()
-    print("=" * 88)
-    print("尾部风险证据表（按超额峰度排序）")
-    print("=" * 88)
-    print_table(table)
-
-    fat = (table["肥尾?"] == "是").sum()
-    print()
-    print(
-        f"结论: {fat}/{len(table)} 只样本满足肥尾判据；"
-        "极端日频率显著高于正态 → 用数据支持「尾部风险存在」。"
-    )
-
-    out = OUTPUT_DIR / "tail_risk_evidence.html"
-    render_html(table, hist_payload, args.start, args.end, out)
-    print(f"可视化: {out}")
-
-
-if __name__ == "__main__":
-    main()

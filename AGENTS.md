@@ -13,32 +13,45 @@
 
 一句话：**知识体系负责「是什么 / 怎么算」；AKShare 负责「数据从哪来」；`finance_lab` 负责「算出结果」。**
 
+## finance_lab 三层结构
+
+详见 `finance_lab/README.md`。依赖方向：
+
+```text
+apps（入口） → reports（HTML） → core（取数/计算/知识体系）
+```
+
+| 入口 | 干什么 |
+|------|--------|
+| `finance_lab.apps.sharpe_demo` | 单票：读夏普公式 → 拉日线 → 打印计算结果 |
+| `finance_lab.apps.sector_compare` | 各行业龙头股对比表 + 走势/夏普 HTML |
+| `finance_lab.apps.tail_risk_evidence` | 用肥尾/极端日数据证明尾部风险 + HTML |
+| `finance_lab.apps.dcf_sector_compare` | 各行业龙头股自由现金流折现（DCF）现值 vs 市值 + HTML |
+
 ## 技术选择（给 Agent 的约束）
 
 - Python 环境用 **uv** + 项目 `.venv`，版本见 `.python-version`（当前 3.12）。
 - 行情库安装 **PyPI 的 `akshare`**，不要再引入 AKTools，也不要默认 vendoring 上游源码。
 - 东方财富类接口在本机网络可能失败；优先使用较稳定的数据源（如新浪日线 `stock_zh_a_daily`），并做好失败降级。
-- 新增计算代码放在 **`finance_lab/`**，保持人类易读：清晰命名、短函数、少量必要注释，避免过度抽象。
+- 新代码放进对应层：`core` / `reports` / `apps`；入口只写在 `apps/`；保持人类易读。
 
-## 常用入口
+## 常用命令
 
 ```bash
-# 安装依赖
 uv sync
 
-# 演示：读「夏普比率」公式 + 拉茅台日线并计算
-uv run python -m finance_lab.demo
+# 单票夏普演示
+uv run python -m finance_lab.apps.sharpe_demo
+uv run python -m finance_lab.apps.sharpe_demo --symbol sz300750 --start 20240101 --end 20260724
 
-# 换标的 / 区间
-uv run python -m finance_lab.demo --symbol sz300750 --start 20240101 --end 20260724
+# 多行业对比 → finance_lab/output/sector_compare.html
+uv run python -m finance_lab.apps.sector_compare
 
-# 多行业代表股对比（表格 + HTML 图）
-uv run python -m finance_lab.compare_sectors
-# 打开 finance_lab/output/sector_compare.html
+# 尾部风险证据 → finance_lab/output/tail_risk_evidence.html
+uv run python -m finance_lab.apps.tail_risk_evidence
 
-# 用数据证明尾部风险（肥尾 / 极端日 vs 正态）
-uv run python -m finance_lab.tail_risk_demo
-# 打开 finance_lab/output/tail_risk_evidence.html
+# 多行业 DCF 现值 → finance_lab/output/dcf_sector_compare.html
+uv run python -m finance_lab.apps.dcf_sector_compare
 ```
 
 知识体系可视化（需本地静态服务，以便加载同目录 JSON）：

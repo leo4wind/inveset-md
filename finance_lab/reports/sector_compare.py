@@ -1,132 +1,11 @@
-"""
-多行业代表股对比：表格 + 可视化 HTML。
-
-默认样本（各选一只）:
-  白酒 / 银行 / 新能源 / 医药 / 保险 / 科技
-
-运行:
-    uv run python -m finance_lab.compare_sectors
-    uv run python -m finance_lab.compare_sectors --start 20240101 --end 20260724
-"""
+"""多行业对比页的 HTML 渲染。"""
 
 from __future__ import annotations
 
-import argparse
 import json
-from dataclasses import asdict, dataclass
 from pathlib import Path
 
 import pandas as pd
-
-from finance_lab.indicators import (
-    compute_sharpe,
-    normalized_price,
-    total_return,
-)
-from finance_lab.knowledge import find_term
-from finance_lab.market_data import fetch_a_share_daily, fetch_china_5y_yield_percent
-from finance_lab.paths import PROJECT_ROOT
-
-
-# 各行业一只代表性 A 股（代码用新浪前缀）
-SECTOR_SAMPLES = [
-    {"sector": "白酒", "name": "贵州茅台", "symbol": "sh600519"},
-    {"sector": "银行", "name": "招商银行", "symbol": "sh600036"},
-    {"sector": "新能源", "name": "宁德时代", "symbol": "sz300750"},
-    {"sector": "医药", "name": "恒瑞医药", "symbol": "sh600276"},
-    {"sector": "保险", "name": "中国平安", "symbol": "sh601318"},
-    {"sector": "科技", "name": "海康威视", "symbol": "sz002415"},
-]
-
-OUTPUT_DIR = PROJECT_ROOT / "finance_lab" / "output"
-
-
-@dataclass
-class StockMetrics:
-    sector: str
-    name: str
-    symbol: str
-    total_return: float
-    annual_return: float
-    annual_volatility: float
-    sharpe: float
-    last_close: float
-    n_days: int
-
-
-def resolve_risk_free(cli_rf: float | None) -> tuple[float, str]:
-    if cli_rf is not None:
-        return cli_rf, "命令行 --rf"
-    y5 = fetch_china_5y_yield_percent()
-    if y5 is not None:
-        return y5 / 100.0, f"中债国债5年 {y5:.4f}%"
-    return 0.02, "默认 2%"
-
-
-def collect_metrics(
-    samples: list[dict],
-    start: str,
-    end: str,
-    risk_free: float,
-) -> tuple[list[StockMetrics], pd.DataFrame]:
-    """拉取各股并计算指标；同时返回归一化净值表（列=股票名）。"""
-    rows: list[StockMetrics] = []
-    curves: dict[str, pd.Series] = {}
-
-    for item in samples:
-        df = fetch_a_share_daily(item["symbol"], start, end)
-        close = df["close"]
-        sharpe = compute_sharpe(close, risk_free_annual=risk_free)
-        label = f"{item['name']}({item['sector']})"
-        nav = normalized_price(close)
-        nav.index = pd.to_datetime(df["date"])
-        curves[label] = nav
-
-        rows.append(
-            StockMetrics(
-                sector=item["sector"],
-                name=item["name"],
-                symbol=item["symbol"],
-                total_return=total_return(close),
-                annual_return=sharpe.annual_return,
-                annual_volatility=sharpe.annual_volatility,
-                sharpe=sharpe.sharpe,
-                last_close=float(close.iloc[-1]),
-                n_days=sharpe.n_days,
-            )
-        )
-        print(f"  OK {item['sector']:4} {item['name']}  夏普={sharpe.sharpe:+.3f}")
-
-    # 对齐交易日，缺失向前填一点再插值不合适；用外连接后 ffill 有限
-    curve_df = pd.DataFrame(curves).sort_index().ffill(limit=3)
-    return rows, curve_df
-
-
-def metrics_to_table(rows: list[StockMetrics]) -> pd.DataFrame:
-    df = pd.DataFrame([asdict(r) for r in rows])
-    df = df.rename(
-        columns={
-            "sector": "行业",
-            "name": "名称",
-            "symbol": "代码",
-            "total_return": "区间收益",
-            "annual_return": "年化收益",
-            "annual_volatility": "年化波动",
-            "sharpe": "夏普比率",
-            "last_close": "最新收盘",
-            "n_days": "样本天数",
-        }
-    )
-    return df.sort_values("夏普比率", ascending=False).reset_index(drop=True)
-
-
-def print_table(table: pd.DataFrame) -> None:
-    show = table.copy()
-    for col in ("区间收益", "年化收益", "年化波动"):
-        show[col] = show[col].map(lambda x: f"{x:.2%}")
-    show["夏普比率"] = show["夏普比率"].map(lambda x: f"{x:+.3f}")
-    show["最新收盘"] = show["最新收盘"].map(lambda x: f"{x:.2f}")
-    print(show.to_string(index=False))
 
 
 def render_html(
@@ -176,7 +55,7 @@ def render_html(
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>多行业代表股对比</title>
+<title>多行业龙头股对比</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root {{
@@ -226,8 +105,8 @@ def render_html(
 </head>
 <body>
 <header>
-  <h1>多行业代表股对比</h1>
-  <p>白酒 / 银行 / 新能源 / 医药 / 保险 / 科技 · 同一区间风险收益对比</p>
+  <h1>多行业龙头股对比</h1>
+  <p>白酒 / 银行 / 新能源 / 医药 / 保险 / 科技 · 各行业若干龙头 · 同一区间风险收益对比</p>
 </header>
 <main>
   <div class="meta">
@@ -320,50 +199,3 @@ new Chart(document.getElementById('navChart'), {{
 """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html, encoding="utf-8")
-
-
-def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(description="多行业代表股表格与图形对比")
-    p.add_argument("--start", default="20240101")
-    p.add_argument("--end", default="20260724")
-    p.add_argument("--rf", type=float, default=None, help="年化无风险利率（小数）")
-    return p
-
-
-def main() -> None:
-    args = build_parser().parse_args()
-    rf, rf_text = resolve_risk_free(args.rf)
-
-    print("知识体系 · 夏普比率")
-    print(find_term("夏普比率").summary())
-    print()
-    print(f"区间 {args.start} → {args.end} | Rf: {rf_text}")
-    print("拉取并计算各行业样本…")
-
-    rows, curve_df = collect_metrics(SECTOR_SAMPLES, args.start, args.end, rf)
-    table = metrics_to_table(rows)
-
-    print()
-    print("=" * 72)
-    print("对比表（按夏普排序）")
-    print("=" * 72)
-    print_table(table)
-
-    out = OUTPUT_DIR / "sector_compare.html"
-    term = find_term("夏普比率")
-    render_html(
-        table=table,
-        curve_df=curve_df,
-        start=args.start,
-        end=args.end,
-        rf_text=rf_text,
-        formula=term.formula or term.definition,
-        out_path=out,
-    )
-    print()
-    print(f"可视化已生成: {out}")
-    print("可用浏览器打开该文件；或: python3 -m http.server 8000 --directory finance_lab/output")
-
-
-if __name__ == "__main__":
-    main()

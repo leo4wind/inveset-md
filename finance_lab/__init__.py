@@ -1,3 +1,8 @@
-"""金融指标实验区：用 AKShare 取数，对照知识体系公式计算结果。"""
+"""
+finance_lab：用 AKShare 数据对照知识体系公式做计算与演示。
 
-__all__ = ["knowledge", "market_data", "indicators"]
+三层结构见 finance_lab/README.md
+  core/     可复用能力
+  reports/  HTML 报告
+  apps/     可运行入口
+"""

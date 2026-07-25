@@ -1,9 +1,7 @@
 """
 对照知识体系公式，用行情序列计算指标。
 
-约定：
-- 输入价格为日线收盘价
-- 年化时按 252 个交易日
+约定：输入为日线收盘价；年化按 252 个交易日。
 """
 
 from __future__ import annotations
@@ -12,7 +10,6 @@ from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
-
 
 TRADING_DAYS_PER_YEAR = 252
 
@@ -46,29 +43,17 @@ def compute_sharpe(
     close: pd.Series,
     risk_free_annual: float = 0.02,
 ) -> SharpeResult:
-    """
-    夏普比率 = (Rp − Rf) ÷ σp
-
-    - Rp、σp：由日收益年化得到
-    - Rf：年化无风险利率（小数，如 0.02）
-    """
+    """夏普比率 = (Rp − Rf) ÷ σp"""
     rets = daily_returns(close)
     if len(rets) < 5:
         raise ValueError("有效收益样本过少，无法计算夏普比率")
 
-    # 日度无风险利率（按交易日均摊）
-    rf_daily = risk_free_annual / TRADING_DAYS_PER_YEAR
-
-    excess = rets - rf_daily
-    # 年化：均值×252，波动×√252
     annual_return = float(rets.mean() * TRADING_DAYS_PER_YEAR)
     annual_vol = float(rets.std(ddof=1) * np.sqrt(TRADING_DAYS_PER_YEAR))
-
     if annual_vol == 0:
         raise ZeroDivisionError("波动率为 0，无法计算夏普比率")
 
     sharpe = (annual_return - risk_free_annual) / annual_vol
-
     return SharpeResult(
         sharpe=float(sharpe),
         annual_return=annual_return,

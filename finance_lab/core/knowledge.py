@@ -6,7 +6,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-from finance_lab.paths import KNOWLEDGE_JSON
+from finance_lab.core.paths import KNOWLEDGE_JSON
 
 
 @dataclass(frozen=True)
@@ -40,11 +40,7 @@ def load_knowledge(path: Path | None = None) -> dict:
 
 
 def find_term(name: str, path: Path | None = None) -> TermCard:
-    """
-    按名称精确或包含匹配一个名词。
-
-    例如: find_term("夏普比率")、find_term("市盈率")
-    """
+    """按名称精确或包含匹配一个名词。例如 find_term("夏普比率")。"""
     data = load_knowledge(path)
     nodes = data.get("nodes", [])
 
